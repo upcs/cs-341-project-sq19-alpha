@@ -1,0 +1,23 @@
+{
+  "name": "sprint-0-sq19-sizhecao",
+  "version": "1.0.0",
+  "description": "This is a README file",
+  "main": "js/server.js",
+  "dependencies": {
+    "jest": "^24.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/upcs/sprint-0-sq19-sizhecao.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/upcs/sprint-0-sq19-sizhecao/issues"
+  },
+  "homepage": "https://github.com/upcs/sprint-0-sq19-sizhecao#readme"
+}
