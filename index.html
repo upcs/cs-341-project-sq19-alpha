@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" href="css/style.css">
-	<script type="text/javascript" src="js/sum.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
-</head>
+  <head>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/sum.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    
+  </head>
 
-<body>
+  <body>
+    
+    <div id = "loginId" class = "loginbox">
+      <img src = "https://seeklogo.com/images/R/rose-bowl-logo-64F46B5969-seeklogo.com.png" class = "avatar">
+      <h1 class = "logintitle" >Login Here </h1>
+      <form>
+	<p>Username </p>
+	<input type = "text" name = "" placeholder = "Enter Username">
+	<p> Password </p>
+	<input type= "password" name = "" placeholder = "Enter Password">
+	<input type = "submit" name = "" value = "Login"  onclick = "skipFunction()">
+	<a href="#"> Lost your password? </a><br>
+	<a href="#"> Don't have an account?</a>	
+      </form>
+      <button id = "skipButton" onclick = "skipFunction()" > Skip login </button>
+    </div> 
 
-	<h1>Hello World!</h1>
 
-	<p>
-		<script>myfunction();</script>
-	</p>
+    <div class = "Webpage">
+    <h1 id = "header"> Hello World!</h1>
+    
+    <p>
+      <script>myfunction();</script>
+    </p>
+
+    </div>
 	
-
-	
- 		
-
-
-</body>
+  </body>
 </html>
