@@ -8,6 +8,10 @@ h1 {
     color: pink;
 }
 
+.webpage{
+    visibility: hidden;
+}
+
 /************************ Login box *************************/
 .avatar{
     width: 120px;
