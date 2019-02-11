@@ -6,9 +6,14 @@
   "dependencies": {
     "jest": "^24.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "codecov": "^3.1.0",
+    "jscoverage": "^0.6.0",
+    "nodeunit": "^0.11.3"
+  },
   "scripts": {
-    "test": "jest"
+    "test": "nodeunit test",
+    "codecov": "jscoverage lib && YOURPACKAGE_COVERAGE=1 nodeunit --reporter=lcov test && codecov"
   },
   "repository": {
     "type": "git",
