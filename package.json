@@ -4,6 +4,7 @@
   "description": "This is a README file",
   "main": "js/server.js",
   "dependencies": {
+    "ejs": "^2.6.1",
     "jest": "^24.0.0"
   },
   "devDependencies": {
