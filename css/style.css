@@ -1,16 +1,82 @@
 body {
-    background: url("http://nickgrier.com/production/wp-content/uploads/2017/02/Portland-aerial-photo-1200x720.jpg");
+    background: url("http://hdqwalls.com/wallpapers/st-johns-bridge-of-portland-m3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 h1 {
-    color: pink;
+    color: black;
+    font-weight: bold; 
+    font-family: "Georgia";
+    text-align: center;  
 }
 
 .webpage{
     visibility: hidden;
 }
+/***************** The following are things found in the side tab********/
+h2{
+  font-weight: italic; 
+  font-family: "Georgia"; 
+ 
+
+}
+h3{
+  font-family: "Georgia"; 
+}
+
+p{
+  font-family: "Georgia";
+}
+
+
+/*********************** Side tabs ****************************/
+
+* {box-sizing: border-box}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 10%;
+  height: 300px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 15px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #90848e;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 15%;
+  border-left: none;
+  height: 300px;
+}
+
 
 /************************ Login box *************************/
 .avatar{
