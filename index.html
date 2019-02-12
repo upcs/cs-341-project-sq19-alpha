@@ -1,23 +1,109 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" href="css/style.css">
-	<script type="text/javascript" src="js/sum.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
-</head>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/index.js"></script>
+    
+  </head>
 
-<body>
+  <body>
+    
+    <div id = "loginId" class = "loginbox">
+      
+      <img src = "https://seeklogo.com/images/R/rose-bowl-logo-64F46B5969-seeklogo.com.png" class = "avatar">
+      <h1 class = "logintitle" >Login Here </h1>
+      
+      <form>
+	
+	<p>Username </p>
+	<input type = "text" name = "" placeholder = "Enter Username">
+	<p> Password </p>
+	<input type= "password" name = "" placeholder = "Enter Password">
+	<input type = "submit" name = "" value = "Login"  onclick = "skipFunction()">
+	<a href="#"> Lost your password? </a><br>
+	<a href="#"> Don't have an account?</a>
 
-	<h1>Hello World!</h1>
+      </form>
+      
+      <button id = "skipButton" onclick = "skipFunction()" > Skip login </button>
+      
+   </div>
+   
+
+    <div id = "mainWebpage" class = "webpage">
+      
+      
+	<h1>Tier One 101: Post-Disaster Prep</h1>
 
 	<p>
 		<script>myfunction();</script>
 	</p>
-	
+<!--Source for this code: https://www.w3schools.com/howto/howto_js_vertical_tabs.asp--> 
+	<h2>Extra information!</h2>
+<p>Click on buttons for some new knowldge</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Earthquake')" id="defaultOpen">Earthquake</button>
+  <button class="tablinks" onclick="openCity(event, 'Tsunami')">Tsunami</button>
+  <button class="tablinks" onclick="openCity(event, 'Tornado')">Tornado</button>
+</div>
+
+<div id="Earthquake" class="tabcontent">
+  <h3>Earthquake</h3>
+  <p>Here is some information about earthquakes.</p>
+</div>
+
+<div id="Tsunami" class="tabcontent">
+  <h3>Tsunami</h3>
+  <p>Blah blah blah Tsunami</p> 
+</div>
+
+<div id="Tornado" class="tabcontent">
+  <h3>Tornado</h3>
+  <p>Tornadoes kill.</p>
+</div>
 
 	
- 		
+	<center>
+		<img src="https://www.pdxlisted.com/wp-content/uploads/2015/12/portland-neighborhoods-map.jpg" alt="general map of portland" style="width:400px;height:300px;">
+		<p>
+			<!-- To move through various pages
+					Includes: Home link, About link, and link to a new page when Find My Route button is clicked-->
+			<b>Home</b> | <a href="./about.html"> <b>About</b> | <a href="./TierOne.html"> <b>Tier Ones</b>
+			<a href="./findRoute.html">
+		
+		</p>
+		
+		<!-- Create "Find My Route" button and zip code -->
+		<form> 
+		Zip Code:<input type="text" name="zipcode">
+		</form> 
+		<br><button type="button" id="findMyRoute">Find My Route</button><br>
+	</center>
 
 
+</div> 
+
+<script> 
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();	
+</script>  
 </body>
+
 </html>
