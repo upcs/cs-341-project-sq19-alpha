@@ -1,2 +1,5 @@
 This is a README file
-hahaha
+
+Codecov badge: 
+
+[![Codecov Coverage](https://img.shields.io/codecov/c/github/<sizhecao>/<upcs/cs-341-project-sq19-alpha>/<master>.svg?style=flat-square)] (https://codecov.io/gh/<sizhecao>/<upcs/cs-341-project-sq19-alpha>/)
