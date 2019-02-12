@@ -11,3 +11,5 @@ function skipFunction(){
     document.getElementById("mainWebpage").style.visibility= "visible" ;
  
 }
+
+
