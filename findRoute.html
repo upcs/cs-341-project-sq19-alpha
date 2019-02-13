@@ -8,12 +8,25 @@
 	<script type="text/javascript" src="js/index.js"></script>
 </head>
 
-<body>
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/sum.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </head>
 
-	<h1>Find My Route</h1>
-	
+  <body style = "background: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-Background-Images-2.png)">
+    <div class = "findRouteDiv">
+      <h1>Find My Route</h1>
+      
+      <p>
+	<script>myfunction();</script>
+      </p>
+      
+      <center>
 	<p>
-		<script>myfunction();</script>
+	  <!-- Links back to home and about pages -->
+	  <a href="./index.html">Home</a> | <a href="./about.html">About</a> | <a href=".TierOne.html"> Tier One Facilities</a>
+	  <b id="findMyRoute"></b>
 	</p>
 	
 	<center>
@@ -30,31 +43,26 @@
 		  Email (Optional):<br>						<!-- for user to enter email (to send pdf copy of route info if desired) -->
 		  <input type="text" name="email">
 		  <br><br>
-		  <img style="display:none;" id="bigpic" src="bigpic" />
-		  <button type="submit" id="submit" value="Submit" onclick="submitZip()">Submit</button><br>
-		  <img style="display:none;" id="bigpic" src="bigpic" />
+		  
 		</form>
 	</center>
 	
-	<script>
-		function submitZip(){
-			var zipcodeInput = document.getElementById('zipcode');
-			var textValue=zipcodeInput.value;
+
 	
-			if (textValue==''){ 
-				alert('WARNING: Must enter a zipcode.');
-			}
-			else{ // Otherwise...
-				alert('HELLO');
-				$("form").remove();
-				var sourceOfPicture = "https://cdn4.iconfinder.com/data/icons/ios7-active-strategy/512/route_sign_road_direction-512.png";
-				var img = document.getElementById('bigpic');
-				img.style.display = "block";
-			}
-		}
-	</script>
+	<!-- Quick form (to be edited further) -->
 	
-	
- 		
+	<form>
+	  Zipcode:<br>								<!-- for user to enter zipcode (to be used in route generation) -->
+	  <input type="text" name="zipcode">
+	  <br>
+	  Email (Optional):<br>						<!-- for user to enter email (to send pdf copy of route info if desired) -->
+	  <input type="text" name="email">
+	  <br><br>
+	  <input type="submit" value="Submit">		<!-- temp submit button -->
+	</form>
+    
+      </center>
+    </div>
+    
 </body>
 </html>
