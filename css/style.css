@@ -248,3 +248,28 @@ p{
     color: #000;
 
 }
+
+
+
+/************************ ABOUT PAGE *************************/
+
+.aboutDiv {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#shortAbout {
+    background: white;
+	color: black;
+	font-family: "Georgia";
+	padding: 15px;
+	word-wrap: break-word;
+	width: 600px;
+	
+}
