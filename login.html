@@ -21,21 +21,24 @@
 
  </head>
 	<body>
+		
     <div id = "loginId" class = "loginbox">
       
       <img src = "https://seeklogo.com/images/R/rose-bowl-logo-64F46B5969-seeklogo.com.png" class = "avatar">
       <h1 class = "logintitle" >Login Here </h1>
       
-      <form>
+      <form id="loginForm">
 	
-	<p>Username </p>
-	<input type = "text" id="username" name = "" placeholder = "Enter Username">
-	<p> Password </p>
-	<input type= "password" id="password" name = "" placeholder = "Enter Password">
+		<p>Username </p>
+		<input type = "text" id="username" name = "" placeholder = "Enter Username">
+		<p> Password </p>
+		<input type= "password" id="password" name = "" placeholder = "Enter Password">
 	
-	<input type = "submit" value = "Login" id="loginButton" onclick="goToHome()">
-	<a href="index.html"> Lost your password? </a><br>
-	<a href="index.html"> Skip Login</a>
+		<input type="submit" value = "Login" id="loginButton" onclick="goToHome()">
+	
+		<a href="index.html"> <button id="test">button</button> </a><br>
+		<a href="index.html"> Lost your password? </a><br>
+		<a href="index.html"> Skip Login</a>
 
       </form>
 
@@ -47,11 +50,11 @@
 			var validPassword = /^[a-z]*(.gov)$/;
  			var usernameVal=username.value;
 			var passwordVal=password.value;
-			//var homePage = "./index.html";
+			var loginForm = document.getElementById('loginForm');
 	
  			if ((usernameVal.match(validUsername)) && (passwordVal.match(validPassword))){ 
  				alert('This is a valid username & password! (:');
- 				window.location.href = './index.html';
+ 				loginForm.action="index.html";
  			}
  			else{ // Otherwise...
  				alert('WARNING: Must enter a valid username AND password.');
