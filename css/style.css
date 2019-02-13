@@ -11,6 +11,11 @@ h1 {
     text-align: center;  
 }
 
+#links {
+    font-family: "Georgia";
+    text-align: center;  
+}
+
 #govLogin{
 	float: right;
     border: none;
@@ -29,7 +34,7 @@ h1 {
    
 }
 .leftDiv{
-    display: inline;
+	display: inline;
     padding: 50px;
 }
 .rightDiv b{
