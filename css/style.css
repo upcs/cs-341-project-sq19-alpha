@@ -1,5 +1,5 @@
 body {
-    background: url("http://hdqwalls.com/wallpapers/st-johns-bridge-of-portland-m3.jpg");
+    /*background: url("http://hdqwalls.com/wallpapers/st-johns-bridge-of-portland-m3.jpg");*/
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -30,15 +30,19 @@ p{
 }
 
 
-/*********************** Side tabs ****************************/
+/***************************************************************/
 
+
+
+
+/***************************************************************/
 * {box-sizing: border-box}
 
 /* Style the tab */
 .tab {
-  float: left;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+ float: left;
+  border: 1px solid #90848e;
+  background-color: #c6bebe;
   width: 10%;
   height: 300px;
 }
@@ -72,9 +76,10 @@ p{
   float: left;
   padding: 0px 12px;
   border: 1px solid #ccc;
-  width: 15%;
+  width: 18%;
   border-left: none;
-  height: 300px;
+  height: 325px;
+  background-color: #fbf7f5; 
 }
 
 
