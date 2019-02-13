@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="css/style.css">
     <script type = "text/javascript" src= "js/index.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <style> 
 	html, 
 	body {
@@ -28,16 +29,35 @@
       <form>
 	
 	<p>Username </p>
-	<input type = "text" name = "" placeholder = "Enter Username">
+	<input type = "text" id="username" name = "" placeholder = "Enter Username">
 	<p> Password </p>
-	<input type= "password" name = "" placeholder = "Enter Password">
-	<input type = "submit" name = "" value = "Login"  onclick = "skipFunction()">
+	<input type= "password" id="password" name = "" placeholder = "Enter Password">
+	
+	<input type = "submit" value = "Login" id="loginButton" onclick="goToHome()">
 	<a href="index.html"> Lost your password? </a><br>
 	<a href="index.html"> Skip Login</a>
 
       </form>
 
-     
+ 	<script>
+ 		function goToHome(){
+ 			var username = document.getElementById('username');
+			var password = document.getElementById('password');
+ 			var validUsername = /^[a-z]*(.gov)$/;
+			var validPassword = /^[a-z]*(.gov)$/;
+ 			var usernameVal=username.value;
+			var passwordVal=password.value;
+			//var homePage = "./index.html";
+	
+ 			if ((usernameVal.match(validUsername)) && (passwordVal.match(validPassword))){ 
+ 				alert('This is a valid username & password! (:');
+ 				window.location.href = './index.html';
+ 			}
+ 			else{ // Otherwise...
+ 				alert('WARNING: Must enter a valid username AND password.');
+ 			}
+ 		}
+ 	</script>
       
     </div>
   </body>

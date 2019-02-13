@@ -11,6 +11,22 @@ h1 {
     text-align: center;  
 }
 
+#links {
+    font-family: "Georgia";
+    text-align: center;  
+}
+
+#govLogin{
+	float: right;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
 .rightDiv{
     float: right;
     padding: 50px;
@@ -18,7 +34,7 @@ h1 {
    
 }
 .leftDiv{
-    display: inline;
+	display: inline;
     padding: 50px;
 }
 .rightDiv b{
@@ -231,4 +247,29 @@ p{
     background: #ffc1067;
     color: #000;
 
+}
+
+
+
+/************************ ABOUT PAGE *************************/
+
+.aboutDiv {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#shortAbout {
+    background: white;
+	color: black;
+	font-family: "Georgia";
+	padding: 15px;
+	word-wrap: break-word;
+	width: 600px;
+	
 }
