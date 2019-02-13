@@ -11,6 +11,17 @@ h1 {
     text-align: center;  
 }
 
+#govLogin{
+	float: right;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
 .rightDiv{
     float: right;
     padding: 50px;
