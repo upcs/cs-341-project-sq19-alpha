@@ -1,5 +1,9 @@
+function sum(x,y) {
+	return x+y;
+}
+
 function myfunction() {
-    document.write(sum(2,3));
+    document.write(sum(8,3));
 }
 
 //This function deletes the login box from the page
