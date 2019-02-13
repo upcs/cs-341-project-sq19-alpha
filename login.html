@@ -49,12 +49,12 @@
 			var passwordVal=password.value;
 			//var homePage = "./index.html";
 	
- 			if (usernameVal.match(validUsername)){ 
- 				alert('This is a valid username! (:');
+ 			if ((usernameVal.match(validUsername)) && (passwordVal.match(validPassword))){ 
+ 				alert('This is a valid username & password! (:');
  				window.location.href = './index.html';
  			}
  			else{ // Otherwise...
- 				alert('WARNING: Must enter a username.');
+ 				alert('WARNING: Must enter a valid username AND password.');
  			}
  		}
  	</script>
