@@ -6,12 +6,23 @@
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/index.js"></script>
 
-    <style>
-    </style>    
+   <style>
+        html,
+        body {
+        height: 100%;
+        }
+
+        body {
+        background-image: url("https://image.freepik.com/free-photo/abstract-paper-is-colorful-background-creative-design-pastel-wallpaper_6529-892.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+   </style>
+
+
   </head>
 
-  <body style = "background: url(https://ayoqq.org/images/bridge-drawing-silhouette-13.jpg)">
-    
+  <body>  
     
    
 
@@ -31,25 +42,89 @@
   <button class="tablinks" onclick="openCity(event, 'Earthquake')" id="defaultOpen">Earthquake</button>
   <button class="tablinks" onclick="openCity(event, 'Tsunami')">Tsunami</button>
   <button class="tablinks" onclick="openCity(event, 'Tornado')">Tornado</button>
+  <button class="tablinks" onclick="openCity(event, 'Flooding')">Flooding</button>
+  <button class="tablinks" onclick="openCity(event, 'Wildfire')">Wildfire</button>
+  <button class="tablinks" onclick="openCity(event, 'Zombies')">Zombies</button>
+
 </div>
 
+<!--The following sources were used for information on natural disasters:
+https://io9.gizmodo.com/10-practical-tips-for-surviving-the-zombie-apocalypse-5148637
+https://www.ready.gov/wildfires
+http://www.susquehannafloodforecasting.org/before-during-after.html
+http://www.eo.ucar.edu/kids/dangerwx/tornado5.htm
+https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/tsunami.html
+http://www.weatherwizkids.com/weather-safety-earthquake.htm
+--> 
+
+<!-- INFORMATION FOR EARTHQUAKE--> 
 <div id="Earthquake" class="tabcontent">
   <h3>Earthquake</h3>
-  <p>Here is some information about earthquakes.</p>
+  <p>1.Choose a safe place in every room, best to get under a sturdy piece of furniture.</br> 
+2.During the event of an earthquake, drop, cover and hold on. Stay indoors until the shaking stops.
+</br>3.Stay away from windows.</br>4.expect aftershocks! </p>
 </div>
 
+
+<!--INFORMATION FOR TSUNAMI--> 
 <div id="Tsunami" class="tabcontent">
   <h3>Tsunami</h3>
-  <p>Blah blah blah Tsunami</p> 
+  <p>1.Go as high and far as you can.</br>
+2. A tsunami warning: a tsunami may have been generated 
+and could be close to your area.</br>
+3. A tsunami watch: tsunami has not been verified but could exist.</br>
+4.Avoid downed power lines
+and get to higher ground. </p> 
 </div>
 
+
+<!--INFORMATION FOR TORNADO--> 
 <div id="Tornado" class="tabcontent">
   <h3>Tornado</h3>
-  <p>Tornadoes kill.</p>
+  <p>1.Go to windowless interior room on lowest level of house.</br>
+2. If there is no basement, go to an inner 
+hallway or an inner smaller room, like a bathroom or closet.</br> 
+3. Get away from the windows. Go to the center of 
+the room.</br> 
+4. Get under a piece of sturdy furniture.</p>
 </div>
 
+
+<!--INFORMATION FOR FLOODING-->
+<div id="Flooding" class="tabcontent">
+  <h3>Flooding</h3>
+  <p>1.Climb to safety immediately, get out of low aread subject to flooding.</br> 
+2. If driving don't go through flooded roadways. </br> 
+3. Assemble your disaster supplies. Be prepared to evacuate, identify places to go. </br> 
+4. Fill your car's gas tank. And if you're told to leave, do so quickly!</p>
+</div>
+
+
+<!--INFORMATION FOR WILDIRE--> 
+<div id="Wildfire" class="tabcontent">
+  <h3>Wildfire</h3>
+  <p>IF YOU ARE UNDER A WILDFIRE WARNING:</br> 
+1. Leave if told to do so.</br> 
+2. If trapped, called 9-1-1.</br>
+3. Listen for emergency information and alert.</br>
+4. Use N95 masks to keep particles out of the air you breathe </p>
+</div>
+
+
+<!--INFORMATION FOR ZOMBIES--> 
+<div id="Zombies" class="tabcontent">
+  <h3>Zombies</h3>
+  <p>1.Clear the room.</br> 
+2.Never turn your back on the enemy.</br>
+3.Zombies are the least of your worries.</br> 
+4.Choose your weapons wisely.</br> 
+5. Windows are not your friend. Suit up.</p>
+</div>
+
+
+
 	
-	<center>
+		<center>	
 		<img src="https://www.pdxlisted.com/wp-content/uploads/2015/12/portland-neighborhoods-map.jpg" alt="general map of portland" style="width:400px;height:300px;">
 		<p>
 			<!-- To move through various pages
@@ -64,7 +139,7 @@
 		Zip Code:<input type="text" name="zipcode">
 		</form> 
 		<br><button type="button" id="findMyRoute">Find My Route</button><br>
-	</center>
+		</center>
 
 
 </div> 
