@@ -21,19 +21,15 @@
       <p>
 	<script>myfunction();</script>
       </p>
-      
-      <center>
+	  
+	  <center>
 	<p>
 	  <!-- Links back to home and about pages -->
-	  <a href="./index.html">Home</a> | <a href="./about.html">About</a> | <a href=".TierOne.html"> Tier One Facilities</a>
+	  <a href="./index.html">Home</a> | <a href="./about.html">About</a> | <a href="./TierOne.html"> Tier One Facilities</a>
 	  <b id="findMyRoute"></b>
 	</p>
 	
-	<center>
-		<p>
-			<!-- Links back to home and about pages -->
-			<a href="./index.html">Home</a> | <a href="./about.html">About</a> <b id="findMyRoute"></b>
-		</p>
+	
 		
 		<!-- Quick form (to be edited further) -->
 		<form>
@@ -43,25 +39,30 @@
 		  Email (Optional):<br>						<!-- for user to enter email (to send pdf copy of route info if desired) -->
 		  <input type="text" name="email">
 		  <br><br>
-		  
+		  <input type="submit" value="Submit" onclick= "submitZip()">	
 		</form>
+		<img style="visibility:hidden;" id="testPic" src="https://www.flyingduchess.com/wp-content/uploads/2013/09/535804-1680x1050-e1380228899264.jpg" />
 	</center>
 	
-
+	<script>
+		function submitZip(){
+			var zipcodeInput = document.getElementById('zipcode');
+			var validZipcode = /^[0-9]{5}$/;
+			var textValue=zipcodeInput.value;
+			var image = document.getElementById('testPic');
 	
-	<!-- Quick form (to be edited further) -->
+			if (textValue.match(validZipcode)){ 
+				alert('This is a valid zipcode! (:');
+				$("form").remove();
+				image.style.visibility = "visible";
+			}
+			else{ // Otherwise...
+				alert('WARNING: Must enter a zipcode.');
+			}
+		}
+	</script>
 	
-	<form>
-	  Zipcode:<br>								<!-- for user to enter zipcode (to be used in route generation) -->
-	  <input type="text" name="zipcode">
-	  <br>
-	  Email (Optional):<br>						<!-- for user to enter email (to send pdf copy of route info if desired) -->
-	  <input type="text" name="email">
-	  <br><br>
-	  <input type="submit" value="Submit">		<!-- temp submit button -->
-	</form>
-    
-      </center>
+	
     </div>
     
 </body>
