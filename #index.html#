@@ -51,8 +51,8 @@
 	  <!-- Create "Find My Route" button and zip code -->
 	  <form> 
 	    Zip Code:<input type="text" name="zipcode">
-	  </form> 
-	  <br><button type="button" id="findMyRoute">Find My Route</button><br>
+	  </form> <br>
+	  <button type="button" id="findMyRoute">Find My Route</button><br>
 	</center>
       </div>
       
