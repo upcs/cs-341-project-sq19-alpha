@@ -11,6 +11,8 @@ test('add 12+1 to equal 13', () => {
 
 test('add 38+62 to equal 100', () => {
 	expect(sum(38,62)).toBe(100);
+	
+
 });
 
 
