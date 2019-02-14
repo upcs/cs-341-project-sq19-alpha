@@ -249,8 +249,6 @@ p{
 
 }
 
-
-
 /************************ ABOUT PAGE *************************/
 
 .aboutDiv {
@@ -272,4 +270,23 @@ p{
 	word-wrap: break-word;
 	width: 600px;
 	
+}
+
+/************************ GOV STATS PAGE *************************/
+
+#statsTable {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  color:black;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
