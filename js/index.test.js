@@ -16,13 +16,13 @@ describe('sum suite', function() {
 	});
 });
 
-const skipFunction = require('./index.js');
+// const skipFunction = require('./index.js');
 
-describe('skipFunction', function() {
-	test('loginBoxDiv should be null', () => {
-		expect(loginBoxDiv).toBeNull;
-	});
-});
+// describe('skipFunction', function() {
+// 	test('loginBoxDiv should be null', () => {
+// 		expect(loginBoxDiv).toBeNull;
+// 	});
+// });
 
 
 
