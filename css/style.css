@@ -290,3 +290,25 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+#tempMessage {
+    background: transparent;
+	color: black;
+	font-size: 20px;
+	font-family: "Georgia";
+	padding: 15px;
+	word-wrap: break-word;
+	width: 600px;
+}
+
+.bunnyPage {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.top-left {
+  position: absolute;
+  top: 90px;
+  left: 40px;
+}

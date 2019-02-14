@@ -41,8 +41,14 @@
 		  <br><br>
 		  <input type="submit" value="Submit" onclick= "submitZip()">	
 		</form>
-		<img style="visibility:hidden;" id="testPic" src="https://www.flyingduchess.com/wp-content/uploads/2013/09/535804-1680x1050-e1380228899264.jpg" />
+		
+		<div class="bunnyPage">
+		  <img style="visibility:hidden;" id="testPic" src="https://www.flyingduchess.com/wp-content/uploads/2013/09/535804-1680x1050-e1380228899264.jpg" />
+		  <div class="top-left" id="tempMessage"></div>
+		</div>
+		
 	</center>
+	
 	
 	<script>
 		function submitZip(){
@@ -50,15 +56,19 @@
 			var validZipcode = /^[0-9]{5}$/;
 			var textValue=zipcodeInput.value;
 			var image = document.getElementById('testPic');
-	
+
 			if (textValue.match(validZipcode)){ 
-				alert('This is a valid zipcode! (:');
+				//alert('This is a valid zipcode! (:');
 				$("form").remove();
 				image.style.visibility = "visible";
+				$("#tempMessage").text("We are working on your route!");
+				$("#tempMessage").value("We are working on your route!");
+		
 			}
 			else{ // Otherwise...
 				alert('WARNING: Must enter a zipcode.');
 			}
+			return true;
 		}
 	</script>
 	
