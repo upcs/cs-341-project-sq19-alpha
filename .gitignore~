@@ -1,6 +1,10 @@
 
-
+*~.html
 .DS_Store
 /coverage
-/node_modules
+<<<<<<< HEAD
+/js/node_modules
 
+=======
+/node_modules
+>>>>>>> master
