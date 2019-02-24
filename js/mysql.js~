@@ -1,0 +1,14 @@
+<?php
+$servername = "35.236.96.52";
+$username = "student";
+$password = "intoPDX411";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+echo "Connected successfully";
+?>

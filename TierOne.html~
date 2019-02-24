@@ -27,8 +27,7 @@
 			<a href="./index.html">Home</a> | <a href="./about.html">About</a> | <a href="./findRoute.html"></a> |
 			<b>Tier One Facilities</b>
 		</p>
-	</center>
-	
+	</center> 
 	<?php
 	  $servername = "35.236.96.52";
 	  $username = "CS341";
@@ -49,7 +48,7 @@
 	echo "<table><tr><th>ID</th><th>Name</th></tr>";
 	  // output data of each row
 	  while($row = $result->fetch_assoc()) {
-          echo "<tr><td>" . $row["address"]. "</td><td>" . $row["facility_name"]. "</td></tr>";
+          echo "<tr><td>" . $row["id"]. "</td><td>" . $row["firstname"]. " " . $row["lastname"]. "</td></tr>";
 	  }
 	  echo "</table>";
 	} else {
