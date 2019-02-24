@@ -12,9 +12,22 @@
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/sum.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <style>
+        html,
+        body {
+        height: 100%;
+        }
+
+        body {
+	background-image: url("https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-Background-Images-2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+   </style>
+
   </head>
 
-  <body style = "background: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-Background-Images-2.png)">
+   <body>
     <div class = "findRouteDiv">
       <h1>Find My Route</h1>
       
@@ -23,13 +36,17 @@
       </p>
 	  
 	  <center>
-	<p>
-	  <!-- Links back to home and about pages -->
-	  <a href="./index.html">Home</a> | <a href="./about.html">About</a> | <a href="./TierOne.html"> Tier One Facilities</a>
-	  <b id="findMyRoute"></b>
-	</p>
-	
-	
+ <p>
+                        <!-- Links to home page and find route page (find route page can only be acessed directly through home page) -->
+
+                <div class="topnav">
+      <a href="./index.html"> <b>Home</b>  <a href="./about.html"> <b>About</b>  <a href="./TierOne.html"> <b>Facilities</b> 
+	<a href="./extra.html"> <b> Extra Info</b> </a> 
+                </div>
+
+        <div style="padding-left:16px">
+        </div>
+		<br></br> 	
 		
 		<!-- Quick form (to be edited further) -->
 		<form>

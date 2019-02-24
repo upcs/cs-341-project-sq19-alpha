@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
   
-  <head>
+ <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/index.js"></script>
@@ -10,7 +10,7 @@
     <style>
       html,
       body {
-      background-image: url("https://image.freepik.com/free-photo/abstract-paper-is-colorful-background-creative-design-pastel-wallpaper_6529-892.jpg");
+      background-image: url("https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-Background-Images-2.png");
       background-repeat: no-repeat;
       background-size: cover;
       }
@@ -19,13 +19,19 @@
 
   
   <body>   
+
 	   <br><button type="button" id="govLogin" onclick="location.href='./login.html';">Special Login</button><br>
-    <h1>Tier One 101: Post-Disaster Prep</h1>
-  <p id="links">
+	<image src="Logo1.png" width="200" height="200" class="cropping">  
+
+<p id="links">
     <!-- To move through various pages
 	 Includes: Home link, About link, and link to a new page when Find My Route button is clicked-->
-    <b>Home</b> | <a href="./about.html"> <b>About</b> | <a href="./TierOne.html"> <b>Tier One Facilities</b>
-	<a href="./findRoute.html"> <a href="./login.html">
+<div class="topnav">
+      <a href="./about.html"> <b>About</b>  <a href="./TierOne.html"> <b>Facilities</b>
+	<a href="./findRoute.html"> <b>Find Route</b> <a href="./extra.html"> <b>Extra Info</b </a>
+</div> 
+
+<div style="padding-left:16px">
 	  
   </p>
 
@@ -54,132 +60,7 @@
 	</center>
       </div>
 	  
-	  
-	  
-      
-     
-
-    <!------------------------------------------------ Disaster Information Section ------------------------------------------------------->      
-    
-    <div class="leftDiv">
-      
-      <!--Source for this code: https://www.w3schools.com/howto/howto_js_vertical_tabs.asp--> 
-      <h2>Extra information!</h2>
-      <p>Click on buttons for some new knowledge</p>
-      
-      <div class="tab">
-	
-	<button class="tablinks" onclick="openCity(event, 'Earthquake')" id="defaultOpen">Earthquake</button>
-	<button class="tablinks" onclick="openCity(event, 'Tsunami')">Tsunami</button>
-	<button class="tablinks" onclick="openCity(event, 'Tornado')">Tornado</button>
-	<button class="tablinks" onclick="openCity(event, 'Flooding')">Flooding</button>
-	<button class="tablinks" onclick="openCity(event, 'Wildfire')">Wildfire</button>
-	<button class="tablinks" onclick="openCity(event, 'Zombies')">Zombies</button>
-	
-      </div>
-      
-      <!--The following sources were used for information on natural disasters:
-	  https://io9.gizmodo.com/10-practical-tips-for-surviving-the-zombie-apocalypse-5148637
-	  https://www.ready.gov/wildfires
-	  http://www.susquehannafloodforecasting.org/before-during-after.html
-	  http://www.eo.ucar.edu/kids/dangerwx/tornado5.htm
-	  https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/tsunami.html
-	  http://www.weatherwizkids.com/weather-safety-earthquake.htm
-	--> 
-      
-      <!-- INFORMATION FOR EARTHQUAKE--> 
-      <div id="Earthquake" class="tabcontent">
-	
-	<h3>Earthquake</h3>
-	
-	<p>1.Choose a safe place in every room, best to get under a sturdy piece of furniture.</br> 
-	  2.During the event of an earthquake, drop, cover and hold on. Stay indoors until the shaking stops.</br>
-	  3.Stay away from windows.</br>4.expect aftershocks!
-	</p>
-	
-      </div>
-      
-      
-      <!--INFORMATION FOR TSUNAMI--> 
-      <div id="Tsunami" class="tabcontent">
-	<h3>Tsunami</h3>
-	<p>1.Go as high and far as you can.</br>
-	  2. A tsunami warning: a tsunami may have been generated 
-	  and could be close to your area.</br>
-	  3. A tsunami watch: tsunami has not been verified but could exist.</br>
-	  4.Avoid downed power lines
-	  and get to higher ground.
-	</p> 
-      </div>
-      
-      
-      <!--INFORMATION FOR TORNADO--> 
-      <div id="Tornado" class="tabcontent">
-	<h3>Tornado</h3>
-	<p>1.Go to windowless interior room on lowest level of house.</br>
-	  2. If there is no basement, go to an inner 
-	  hallway or an inner smaller room, like a bathroom or closet.</br> 
-	  3. Get away from the windows. Go to the center of 
-	  the room.</br> 
-	  4. Get under a piece of sturdy furniture.</p>
-      </div>
-      
-      
-      <!--INFORMATION FOR FLOODING-->
-      <div id="Flooding" class="tabcontent">
-	<h3>Flooding</h3>
-	<p>1.Climb to safety immediately, get out of low aread subject to flooding.</br> 
-	  2. If driving don't go through flooded roadways. </br> 
-	  3. Assemble your disaster supplies. Be prepared to evacuate, identify places to go. </br> 
-	  4. Fill your car's gas tank. And if you're told to leave, do so quickly!</p>
-      </div>
-      
-      
-      <!--INFORMATION FOR WILDIRE--> 
-      <div id="Wildfire" class="tabcontent">
-	<h3>Wildfire</h3>
-	<p>IF YOU ARE UNDER A WILDFIRE WARNING:</br> 
-	  1. Leave if told to do so.</br> 
-	  2. If trapped, called 9-1-1.</br>
-	  3. Listen for emergency information and alert.</br>
-	  4. Use N95 masks to keep particles out of the air you breathe </p>
-      </div>
-      
-      
-      <!--INFORMATION FOR ZOMBIES--> 
-      <div id="Zombies" class="tabcontent">
-	<h3>Zombies</h3>
-	<p>1.Clear the room.</br> 
-	  2.Never turn your back on the enemy.</br>
-	  3.Zombies are the least of your worries.</br> 
-	  4.Choose your weapons wisely.</br> 
-	  5. Windows are not your friend. Suit up.</p>
-      </div>
-      
-    </div>
-    <!-------------------------------------------------------------------- -------------------------------------------------------> 
-    
-    
-    
-    
-    <script> 
-      function openCity(evt, cityName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-		      tabcontent[i].style.display = "none";
-		      }
-		      tablinks = document.getElementsByClassName("tablinks");
-		      for (i = 0; i < tablinks.length; i++) {
-				      tablinks[i].className = tablinks[i].className.replace(" active", "");
-				      }
-				      document.getElementById(cityName).style.display = "block";
-				      evt.currentTarget.className += " active";
-				      }
-				      
-				      // Get the element with id="defaultOpen" and click on it
-				      document.getElementById("defaultOpen").click();	
-				      </script>  
+	 
   </body>
   
 </html>
