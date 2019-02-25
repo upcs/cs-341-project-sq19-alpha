@@ -11,19 +11,21 @@
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
+<<<<<<< HEAD
     "ejs": "^2.6.1"
 =======
     "ejs": "^2.6.1",
     "jest": "^24.0.0"
 >>>>>>> parent of 451ec03... updates
+=======
+    "ejs": "^2.6.1",
+    "jest": "^24.0.0"
+>>>>>>> parent of 22315d3... node modules (?)
   },
   "devDependencies": {
     "codecov": "^3.1.0",
-    "faker": "^4.1.0",
-    "jest": "^24.1.0",
     "jscoverage": "^0.6.0",
-    "nodeunit": "^0.11.3",
-    "puppeteer": "^1.12.2"
+    "nodeunit": "^0.11.3"
   },
   "scripts": {
     "test": "jest && codecov"

@@ -6,6 +6,10 @@ This is a README file
 # Travis CI
 [![Build Status](https://travis-ci.org/upcs/cs-341-project-sq19-alpha.svg?branch=master)](https://travis-ci.org/upcs/cs-341-project-sq19-alpha)
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 22315d3... node modules (?)
 Sprint1:
   - code coverage set up
   - multiple page navigation
@@ -32,3 +36,7 @@ What can we automate?
 - Distance/boundary calculations
 - Error messages
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 22315d3... node modules (?)

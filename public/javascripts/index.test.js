@@ -16,14 +16,6 @@ describe('sum suite', function() {
 	});
 });
 
-it('Test click event', () => {
-    const mockFn = jest.fn();
-  	mockFn();
-  	expect(mockFn).toHaveBeenCalled();
-});
-
-
-
 // const skipFunction = require('./index.js');
 
 // describe('skipFunction', function() {
