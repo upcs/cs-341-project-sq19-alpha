@@ -1,12 +1,10 @@
 {
-  "name": "project-test",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www",
-    "test": "jest && codecov"
-  },
+  "name": "sprint-0-sq19-sizhecao",
+  "version": "1.0.0",
+  "description": "This is a README file",
+  "main": "js/server.js",
   "dependencies": {
+<<<<<<< HEAD
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
@@ -14,6 +12,10 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
     "ejs": "^2.6.1"
+=======
+    "ejs": "^2.6.1",
+    "jest": "^24.0.0"
+>>>>>>> parent of 451ec03... updates
   },
   "devDependencies": {
     "codecov": "^3.1.0",
@@ -22,6 +24,9 @@
     "jscoverage": "^0.6.0",
     "nodeunit": "^0.11.3",
     "puppeteer": "^1.12.2"
+  },
+  "scripts": {
+    "test": "jest && codecov"
   },
   "jest": {
     "coverageDirectory": "./coverage/",

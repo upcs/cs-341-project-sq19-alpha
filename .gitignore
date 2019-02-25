@@ -1,5 +1,6 @@
 
-*~.html
+
 .DS_Store
 /coverage
-/node_modules
+/js/node_modules
+
