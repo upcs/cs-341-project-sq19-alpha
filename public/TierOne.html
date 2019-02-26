@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" href="stylesheets/style.css">
-	<script type="text/javascript" src="javascripts/sum.js"></script>
-	<script type="text/javascript" src="javascripts/index.js"></script>
-</head>
+  
+  <head>
+    
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/> </script>
+    <script type="text/javascript" src="/javascripts/tableFunction.js"></script>
+    <script> $(document).ready(main) </script>
+    
+  </head>
 
 
-<body style = "background: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-Background-Images-2.png)">
-	<center> 
-	<h1>Facilities in Portland</h1>
- 
-
-	<p>
-		<script>myfunction();</script>
-	</p>
+  <body style = "background: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-Background-Images-2.png)">
+    <center> 
+      <h1>Facilities in Portland</h1>
+     
 	
 	<p>	
 			<!-- Links to home page and find route page (find route page can only be acessed directly through home page) -->
@@ -30,41 +30,21 @@
  	</p>
 
 	</center> 
+	
+	
+	<!-- Temp text (to be edited later) -->
+	<!-- need actual data from databases here, using the new types of buildings or only some of them -->
+	<button id="dataButton" onclick=> Fill Table </button>
 
 
-		<!-- Temp text (to be edited later) -->
-	<!-- need actual data from databases here, using the new types of buildings or only some of them --> 
-
-	<?php
-	  $servername = "35.236.96.52";
-	  $username = "student";
-	  $password = "intoPDX411";
-	  $dbname = "CS341";
+	<!--Data table to be filled -->
+	<table id="myData">
 	  
-	  // Create connection
-	  $conn = new mysqli($servername, $username, $password, $dbname);
-	  // Check connection
-	  if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-	} 
+	  <tr> 
+	  </tr>
+	 	  
+	</table>
 	
-	$sql = "SELECT address, facility_name FROM TIERONE";
-	$result = $conn->query($sql);
-	
-	if ($result->num_rows > 0) {
-	echo "<table><tr><th>ID</th><th>Name</th></tr>";
-	  // output data of each row
-	  while($row = $result->fetch_assoc()) {
-          echo "<tr><td>" . $row["address"]. "</td><td>" . $row["facility_name"]. "</td></tr>";
-	  }
-	  echo "</table>";
-	} else {
-	echo "0 results";
-	}
-
-$conn->close();
-?> 
-
 	
 </body>
 

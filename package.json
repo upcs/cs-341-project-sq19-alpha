@@ -7,14 +7,16 @@
     "test": "jest && codecov"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
+    "ejs": "^2.6.1",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
-    "morgan": "~1.9.0",
-    "ejs": "^2.6.1",
     "jest": "^24.0.0",
+    "knex": "^0.16.3",
+    "morgan": "~1.9.0",
     "mysql": "^2.16.0"
   },
   "devDependencies": {
@@ -35,5 +37,7 @@
   "bugs": {
     "url": "https://github.com/upcs/sprint-0-sq19-sizhecao/issues"
   },
-  "homepage": "https://github.com/upcs/sprint-0-sq19-sizhecao#readme"
+  "homepage": "https://github.com/upcs/sprint-0-sq19-sizhecao#readme",
+  "description": "[![codecov](https://codecov.io/gh/upcs/cs-341-project-sq19-alpha/branch/master/graph/badge.svg)](https://codecov.io/gh/upcs/cs-341-project-sq19-alpha)",
+  "main": "index.js"
 }
