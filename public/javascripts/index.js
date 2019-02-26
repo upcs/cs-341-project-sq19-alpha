@@ -1,58 +1,67 @@
 
 //-------------------------------------------------------------------------------------
-function sum(x,y) {
-	return x+y;
+function sum(x, y) {
+	return x + y;
 }
 //has to match function name
-module.exports = sum;
 
 
 //-------------------------------------------------------------------------------------
+function isValidUnamePass(uname, pass) {
+	var validUsername = /^[a-z]*(.gov)$/;
+	var validPassword = /^[a-z]*(.gov)$/;
+	if ((uname.match(validUsername)) && (pass.match(validPassword))) {
+		return true;
+	}
+	else { // Otherwise...
+		return false;
+	}
+}
+
 function goToHome() {
 	var username = document.getElementById('username');
 	var password = document.getElementById('password');
-	var validUsername = /^[a-z]*(.gov)$/;
-	var validPassword = /^[a-z]*(.gov)$/;
 	var usernameVal = username.value;
 	var passwordVal = password.value;
 	var loginForm = document.getElementById('loginForm');
-	var testBool = false;
 
-	if ((usernameVal.match(validUsername)) && (passwordVal.match(validPassword))) {
-		//alert('This is a valid username & password! (:');
-		testBool = true;
+	if (isValidUnamePass(usernameVal, passwordVal)) {
 		loginForm.action = "govHome.html";
 	}
 	else { // Otherwise...
 		alert('WARNING: Must enter a valid username AND password.');
-		testBool = false;
 	}
-	return testBool;
 }
-module.exports = goToHome;
 
 
 //-------------------------------------------------------------------------------------
-function submitZip(){
-	var zipcodeInput = document.getElementById('zipcode');
+function isValidZip(zip){
 	var validZipcode = /^[0-9]{5}$/;
-	var textValue=zipcodeInput.value;
+	if (zip.match(validZipcode)) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+function submitZip() {
+	var zipcodeInput = document.getElementById('zipcode');
+	var textValue = zipcodeInput.value;
 	var image = document.getElementById('testPic');
 
-	if (textValue.match(validZipcode)){ 
-		//alert('This is a valid zipcode! (:');
+	if (isValidZip(textValue)) {
 		$("form").remove();
 		image.style.visibility = "visible";
 		$("#tempMessage").text("We are working on your route!");
 		$("#tempMessage").value("We are working on your route!");
 
 	}
-	else{ // Otherwise...
+	else {
 		alert('WARNING: Must enter a zipcode.');
 	}
 	return true;
 }
-module.exports = submitZip;
+module.exports = { sum:sum, isValidUnamePass:isValidUnamePass, isValidZip:isValidZip, goToHome:goToHome, submitZip:submitZip };
 
 
 
