@@ -1,8 +1,11 @@
-function sum(x,y) {
-	return x+y;
+
+//-------------------------------------------------------------------------------------
+function sum(x, y) {
+	return x + y;
 }
 //has to match function name
-module.exports = sum;
+
+module.exports = { sum:sum };
 
 
 
