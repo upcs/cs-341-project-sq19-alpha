@@ -1,67 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="./stylesheets/style.css">
-    <script type = "text/javascript" src= "js/index.js"></script>
+
+<head>
+	<link rel="stylesheet" href="./stylesheets/style.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-   <style> 
-	html, 
-	body {
-	height: 100%;
-	}
+	<script type="text/javascript" src="javascripts/index.js"></script>
+	<script type="text/javascript" src="javascripts/index.test.js"></script>
+	<style>
+		html,
+		body {
+			height: 100%;
+		}
 
-	body {
-	background-image: url("http://hdqwalls.com/wallpapers/st-johns-bridge-of-portland-m3.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	}
-   </style> 
+		body {
+			background-image: url("http://hdqwalls.com/wallpapers/st-johns-bridge-of-portland-m3.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
 
- 
 
- </head>
-	<body>
-		
-    <div id = "loginId" class = "loginbox">
-      
-      <img src = "https://seeklogo.com/images/R/rose-bowl-logo-64F46B5969-seeklogo.com.png" class = "avatar">
-      <h1 class = "logintitle" >Login Here </h1>
-      
-      <form id="loginForm">
-	
-		<p>Username </p>
-		<input type = "text" id="username" name = "" placeholder = "Enter Username">
-		<p> Password </p>
-		<input type= "password" id="password" name = "" placeholder = "Enter Password">
-	
-		<input type="submit" value = "Login" id="loginButton" onclick="goToHome()">
-		<a href="index.html"> Lost your password? </a><br>
-		<a href="index.html"> Skip Login</a>
 
-      </form>
-	  
-	  
+</head>
+
+<body>
+
+	<div id="loginId" class="loginbox">
+
+		<img src="https://seeklogo.com/images/R/rose-bowl-logo-64F46B5969-seeklogo.com.png" class="avatar">
+		<h1 class="logintitle">Login Here </h1>
+
+		<form id="loginForm">
+
+			<p>Username </p>
+			<input type="text" id="username" name="" value="username" placeholder="Enter Username">
+			<p> Password </p>
+			<input type="password" id="password" name="" value="password" placeholder="Enter Password">
+
+			<input type="submit" value="Login" id="loginButton" onclick="goToHome()">
+			<a href="index.html"> Lost your password? </a><br>
+			<a href="index.html"> Skip Login</a>
+
+		</form>
+
+
 		<script>
-			function goToHome(){
+			window.onload() = function goToHome() {
 				var username = document.getElementById('username');
 				var password = document.getElementById('password');
 				var validUsername = /^[a-z]*(.gov)$/;
 				var validPassword = /^[a-z]*(.gov)$/;
-				var usernameVal=username.value;
-				var passwordVal=password.value;
+				var usernameVal = username.value;
+				var passwordVal = password.value;
 				var loginForm = document.getElementById('loginForm');
+				var testBool = false;
 
-				if ((usernameVal.match(validUsername)) && (passwordVal.match(validPassword))){ 
+				if ((usernameVal.match(validUsername)) && (passwordVal.match(validPassword))) {
 					//alert('This is a valid username & password! (:');
-					loginForm.action="govHome.html";
+					testBool = true;
+					loginForm.action = "govHome.html";
 				}
-				else{ // Otherwise...
+				else { // Otherwise...
 					alert('WARNING: Must enter a valid username AND password.');
+					testBool = false;
 				}
+				return testBool;
 			}
+			module.exports = goToHome;
+
+
 		</script>
-      
-    </div>
-  </body>
-  
+
+	</div>
+</body>
+
 </html>

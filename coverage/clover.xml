@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1550782112358" clover="3.2.0">
-  <project timestamp="1550782112358" name="All files">
-    <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1" elements="7" coveredelements="3" complexity="0" loc="5" ncloc="5" packages="1" files="1" classes="1"/>
-    <file name="index.js" path="/Users/sizhecao/Documents/GitHub/cs-341-project-sq19-alpha/public/javascripts/index.js">
-      <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <line num="2" count="3" type="stmt"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="11" count="0" type="stmt"/>
+<coverage generated="1551148574666" clover="3.2.0">
+  <project timestamp="1551148574666" name="All files">
+    <metrics statements="29" coveredstatements="3" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0" elements="38" coveredelements="3" complexity="0" loc="29" ncloc="29" packages="1" files="1" classes="1"/>
+    <file name="index.js" path="/Users/TawnyMotoyama/Documents/GitHub/cs-341-project-sq19-alpha/public/javascripts/index.js">
+      <metrics statements="29" coveredstatements="3" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <line num="4" count="0" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
       <line num="12" count="0" type="stmt"/>
+      <line num="13" count="0" type="stmt"/>
       <line num="14" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+      <line num="16" count="0" type="stmt"/>
+      <line num="17" count="0" type="stmt"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="19" count="0" type="stmt"/>
+      <line num="21" count="0" type="cond" truecount="0" falsecount="4"/>
+      <line num="23" count="0" type="stmt"/>
+      <line num="24" count="0" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="28" count="0" type="stmt"/>
+      <line num="30" count="0" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="37" count="0" type="stmt"/>
+      <line num="38" count="0" type="stmt"/>
+      <line num="39" count="0" type="stmt"/>
+      <line num="40" count="0" type="stmt"/>
+      <line num="42" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="44" count="0" type="stmt"/>
+      <line num="45" count="0" type="stmt"/>
+      <line num="46" count="0" type="stmt"/>
+      <line num="47" count="0" type="stmt"/>
+      <line num="51" count="0" type="stmt"/>
+      <line num="53" count="0" type="stmt"/>
+      <line num="55" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
