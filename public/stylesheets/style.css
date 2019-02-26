@@ -358,3 +358,11 @@ body {
   background-color: #008CBA;
   color: white;
 }
+
+
+/*****************************EXTRA PAGE***********************/
+.extraDiv {
+  position: relative;
+  text-align: center;
+  background-color: blue;
+}
