@@ -26,7 +26,7 @@
 	 Includes: Home link, About link, and link to a new page when Find My Route button is clicked-->
 <div class="topnav">
       <a href="./about.html"> <b>About</b>  <a href="./TierOne.html"> <b>Facilities</b>
-	<a href="./findRoute.html"> <b>Find Route</b> <a href="./extra.html"> <b>Extra Info</b> </a>
+	<a href="./findRoute.html"> <b>Find Route</b> <a href="./extra.html"> <b>Extra Info</b </a>
 </div> 
 
 <div style="padding-left:16px">
