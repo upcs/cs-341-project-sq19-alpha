@@ -5,47 +5,40 @@
 
  <link rel="stylesheet" href="./stylesheets/style.css">
         <script type="text/javascript" src="js/index.js"></script>
-
+	<script type="text/javascript" src="./javascripts/extra.js"></script>
 </head>
+
 
 <body style="background-image:url('https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-Background-Images-2.png');">
 
+<center>
+ <img src="smallLogo.png" height="75" width="75">
 <h1>Natual Disaster Information</h1> 
+<ul>
+  <li><a href="./index.html">Home</a></li>
+  <li><a href="./TierOne.html">Facilities</a></li>
+  <li><a href="./findRoute.html">Find Route</a></li>
+  <li><a href="./about.html">About</a></li>
+</ul>
+
+
+</center> 
+
  <p>
     <script>myfunction();</script>
  </p>
 
- <div class="topnav">
-      <a href="./index.html"> <b>Home</b>  <a href="./TierOne.html"> <b>Facilities</b> <a href="./findRoute.html"> <b>Find Route</b>
-	<a href="./about.html"> <b>About</b> </a>
-
-                </div>
-
-        <div style="padding-left:16px">
-        </div>
-
+<br></br> 
+<br></br>
  <div class="aboutDiv">
-                        <img src="https://ae01.alicdn.com/kf/HTB1WCuDXPb.heNjSZFAq6AhKXXaU/Vinyl-Photography-Backdrops-Nature-scene-theme-Prop-Photo-Studio-Background-ZR71.jpg_640x640.jpg" width=1000 height=450 class="portlandImg"/>
-                        <!-- Temp text (to be edited later) -->
+
                         <div class="centered">
-                                <p id="shortAbout">
-				The following page contains information about what to do incase different natural disasters occur. 
-				This is meant to be used prior to any disaster, incase of a disaster follow protocol, if you are 
-				unsure what to do then find an official who may help you. 
+                                <p id="extraAbout"> 
+				The most common natural diasters in Oregon are earthquakes, landslides, tsunamis, and floods. 					The following page contains information about how to react in a natural disaster. It is meant 					to be used by the City of Portland before a natural disaster occurs in order to prep. If you					ever unsure what to do during a disaster find the nearest city official and ask them for help.
                                 </p>
                         </div>
                 </div>
 
- <div class="tab">
-
-        <button class="tablinks" onclick="openCity(event, 'Earthquake')" id="defaultOpen">Earthquake</button>
-        <button class="tablinks" onclick="openCity(event, 'Tsunami')">Tsunami</button>
-        <button class="tablinks" onclick="openCity(event, 'Tornado')">Tornado</button>
-        <button class="tablinks" onclick="openCity(event, 'Flooding')">Flooding</button>
-        <button class="tablinks" onclick="openCity(event, 'Wildfire')">Wildfire</button>
-        <button class="tablinks" onclick="openCity(event, 'Zombies')">Zombies</button>
-
-      </div>
 
       <!--The following sources were used for information on natural disasters:
           https://io9.gizmodo.com/10-practical-tips-for-surviving-the-zombie-apocalypse-5148637
@@ -55,94 +48,92 @@
           https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/tsunami.html
           http://www.weatherwizkids.com/weather-safety-earthquake.htm
         -->
- <!-- INFORMATION FOR EARTHQUAKE-->
-      <div id="Earthquake" class="tabcontent">
-
-        <h3>Earthquake</h3>
-
-        <p>1.Choose a safe place in every room, best to get under a sturdy piece of furniture.</br>
-          2.During the event of an earthquake, drop, cover and hold on. Stay indoors until the shaking stops.</br>
-          3.Stay away from windows.</br>4.expect aftershocks!
-        </p>
-
-      </div>
+<br></br> 
+<br></br>
 
 
-      <!--INFORMATION FOR TSUNAMI-->
-      <div id="Tsunami" class="tabcontent">
-        <h3>Tsunami</h3>
-        <p>1.Go as high and far as you can.</br>
-          2. A tsunami warning: a tsunami may have been generated
-          and could be close to your area.</br>
-          3. A tsunami watch: tsunami has not been verified but could exist.</br>
-          4.Avoid downed power lines
-          and get to higher ground.
-        </p>
-      </div>
+<!--The following was gotten from the resource https://www.w3schools.com/howto/howto_js_lightbox.asp --> 
 
 
-      <!--INFORMATION FOR TORNADO-->
-      <div id="Tornado" class="tabcontent">
-        <h3>Tornado</h3>
-        <p>1.Go to windowless interior room on lowest level of house.</br>
-          2. If there is no basement, go to an inner
-          hallway or an inner smaller room, like a bathroom or closet.</br>
-          3. Get away from the windows. Go to the center of
-          the room.</br>
-          4. Get under a piece of sturdy furniture.</p>
-      </div>
+<h2 style="text-align:center">Select a Natural Disaster </h2>
 
-	<!--INFORMATION FOR FLOODING-->
-      <div id="Flooding" class="tabcontent">
-        <h3>Flooding</h3>
-        <p>1.Climb to safety immediately, get out of low aread subject to flooding.</br>
-          2. If driving don't go through flooded roadways. </br>
-          3. Assemble your disaster supplies. Be prepared to evacuate, identify places to go. </br>
-          4. Fill your car's gas tank. And if you're told to leave, do so quickly!</p>
-      </div>
+<div class="row">
+  <div class="column">
+    <img src="landslide.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="earthquake.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="tsunami.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="flooding.jpg" style="width:100%" style = "height: 300px" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
 
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
 
-      <!--INFORMATION FOR WILDIRE-->
-      <div id="Wildfire" class="tabcontent">
-        <h3>Wildfire</h3>
-        <p>IF YOU ARE UNDER A WILDFIRE WARNING:</br>
-          1. Leave if told to do so.</br>
-          2. If trapped, called 9-1-1.</br>
-          3. Listen for emergency information and alert.</br>
-          4. Use N95 masks to keep particles out of the air you breathe </p>
-      </div>
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="landslide.jpg" style="width:100%">
+    </div>
 
-	<!--INFORMATION FOR ZOMBIES-->
-      <div id="Zombies" class="tabcontent">
-        <h3>Zombies</h3>
-        <p>1.Clear the room.</br>
-          2.Never turn your back on the enemy.</br>
-          3.Zombies are the least of your worries.</br>
-          4.Choose your weapons wisely.</br>
-          5. Windows are not your friend. Suit up.</p>
-      </div>
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="earthquake.jpg" style="width:100%">
+    </div>
 
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="tsunami.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="flooding.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
     </div>
 
 
-	 <script>
-      function openCity(evt, cityName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-                      tabcontent[i].style.display = "none";
-                      }
-                      tablinks = document.getElementsByClassName("tablinks");
-                      for (i = 0; i < tablinks.length; i++) {
-                                      tablinks[i].className = tablinks[i].className.replace(" active", "");
-                                      }
-                                      document.getElementById(cityName).style.display = "block";
-                                      evt.currentTarget.className += " active";
-                                      }
+    <div class="column" >
+<img class="demo cursor" src="landslide.jpg" style="width:100%" style="width:100%" onclick="currentSlide(1)" alt="Landslide:<br></br> 1.Stay alert and awake 2. Keep listening to the weather radio or a portable, battery-powered radio for warnings 3. Listen for any unusual sounds that might indicate moving debris 4. Try to stay on higher ground">
+    </div>
+<div class="column">
+<img class="demo cursor" src="earthquake.jpg" style="width:100%" onclick="currentSlide(2)" alt="Earthquake:<br></br>  1.Choose a safe place in every room, best to get under a sturdy piece of furniture.2.During the event of an earthquake, drop, cover and hold on. Stay indoors until the shaking stops. 3.Stay away from windows.4.expect aftershocks! ">
+</div>
+<div class="column">
+<img class="demo cursor" src="tsunami.jpg" style="width:100%" onclick="currentSlide(3)" alt="Tsunami:<br></br>1.Go as high and far as you can. 2. A tsunami warning: a tsunami may have been generated
+          and could be close to your area.
+          3. A tsunami watch: tsunami has not been verified but could exist.
+          4.Avoid downed power lines
+          and get to higher ground. ">
 
-                                      // Get the element with id="defaultOpen" and click on it
-                                      document.getElementById("defaultOpen").click();
-                                      </script>
+</div>
+<div class="column">
+<img class="demo cursor" src="flooding.jpg" style="width:100%" onclick="currentSlide(4)" alt="Flooding:<br></br> 1.Climb to safety immediately, get out of low aread subject to flooding.
+          2. If driving don't go through flooded roadways. 
+          3. Assemble your disaster supplies. Be prepared to evacuate, identify places to go. 
+          4. Fill your car's gas tank. And if you're told to leave, do so quickly!">
+</div>
+
+
+</div>
+</div>
+
+
+
+
+
+
 
 
 
