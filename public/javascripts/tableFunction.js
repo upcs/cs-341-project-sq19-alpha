@@ -18,8 +18,6 @@ function dataFunction(){
 	       
 	       $("#myData").append(tr);
 	       
-	       alert("hi");
-	       
 	   }, "json");
     
 }
