@@ -4,7 +4,7 @@ function dataFunction(){
     $.post("/orders",null,
 	   function(data, status){
 
-	       /*
+	       
 	       //Here we make a variable called tr that we will append into the
 	       //html file. Basically we are writing html code here and looping through
 	       //the content of the database.
@@ -17,8 +17,6 @@ function dataFunction(){
 	       }
 	       
 	       $("#myData").append(tr);
-	       */
-	       alert("hi");
 	       
 	   }, "json");
     
