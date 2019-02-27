@@ -11,12 +11,16 @@ function dataFunction(){
 	       
 	       var tr = " ";
 	       
-	       for (var i = 0; i<data.length; i++)
+	       for (var i = 1; i<data.length; i++)
 	       {
-		  tr += "<tr>"+"<td>" + data[i].address + "</td>"+"</tr>"; 
+		   tr += "<tr>"+"<td>" + data[i].name+ "</td>"+
+		       "<td>"+ data[i].address+"</td>"
+		       +"<td>"+ data[i].tier+"</td>"+"</tr>"; 
 	       }
-	       
+	      
 	       $("#myData").append(tr);
+
+	
 	       
 	   }, "json");
     

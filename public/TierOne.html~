@@ -38,22 +38,11 @@
     <!-- Temp text (to be edited later) -->
     <!-- need actual data from databases here, using the new types of buildings or only some of them --> 
     <!--Data table to be filled -->
-    <button id="dataButton"> Show me the data! </button>
-    <table id="myData" class="dataTable">
-      <thead>
-	<tr>
-	  <th>
-	    Facility Name
-	  </th>
-	  <th>
-	    Facility Address
-	  </th>
-	  <th>
-	    Tier Rank
-	  </th>
-	  
-	</tr>
-      </thead>
+    <button id="dataButton"> Fill Table </button>
+    <table id="myData">
+      
+      <tr> 
+	  </tr>
       
     </table>
     
