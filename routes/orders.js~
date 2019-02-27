@@ -12,7 +12,9 @@ var router = express.Router();
 
 
 function queryData(data, res){
+    
     var array = [];
+    
     for(var i = 0; i<data.length; i++)
     {
 	array.push({address: data[i].address, facility_name: data[i].facility_name});
@@ -23,9 +25,9 @@ function queryData(data, res){
 
 
 /* Expect a post to the server to get the JSON object*/
-router.post('/', function(req, res,next) {
+router.post('/', function(req, res, next) {
     
-    dbms.dbquery("SELECT * FROM TIERONE",
+    dbms.dbquery("SELECT address FROM TIERONE",
 		 function(err, data){
 		     queryData(data, res);
 		 }
