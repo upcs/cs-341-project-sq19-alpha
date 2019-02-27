@@ -330,7 +330,7 @@ body {
   color: white;
 }
 
-
+<<<<<<< HEAD
 /***************************Data Table in Facilities****************/
 .dataTable {
   font-family: "Georgia", Gadget, sans-serif;
@@ -389,8 +389,8 @@ body {
     cursor: pointer;
     background: #ffc1067;
     color: #000;
-}
 
+=======
 /*******************************Extra page layout*************/
 
 #extraAbout {
@@ -571,5 +571,5 @@ li a:hover:not(.active) {
 
 .active {
   background-color: #779ADC;
-
+>>>>>>> master
 }

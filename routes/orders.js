@@ -17,7 +17,7 @@ function queryData(data, res){
     
     for(var i = 0; i<data.length; i++)
     {
-	array.push({address: data[i].address, facility_name: data[i].facility_name});
+	array.push({address: data[i].address, name: data[i].facilitiy_name, tier: data[i].tier});
     }
     res.json(array);
   
@@ -27,7 +27,7 @@ function queryData(data, res){
 /* Expect a post to the server to get the JSON object*/
 router.post('/', function(req, res, next) {
     
-    dbms.dbquery("SELECT address FROM TIERONE",
+    dbms.dbquery("SELECT * FROM TIERONE",
 		 function(err, data){
 		     queryData(data, res);
 		 }
