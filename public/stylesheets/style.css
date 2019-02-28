@@ -201,6 +201,10 @@ h2{
   color: white;
 }
 
+.row {
+  padding-bottom: 100px;
+}
+
 .centered {
   position: absolute;
   top: 12%;
