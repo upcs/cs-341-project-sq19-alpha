@@ -2,6 +2,7 @@ body {
     /*background: url("http://hdqwalls.com/wallpapers/st-johns-bridge-of-portland-m3.jpg");*/
     background-size: cover;
     background-repeat: no-repeat;
+    padding-bottom: 100px;
 }
 
 h1 {
@@ -199,6 +200,10 @@ h2{
   position: relative;
   text-align: center;
   color: white;
+}
+
+.row {
+  padding-bottom: 100px;
 }
 
 .centered {

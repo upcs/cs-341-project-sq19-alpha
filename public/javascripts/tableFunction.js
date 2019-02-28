@@ -3,7 +3,6 @@ function dataFunction(){
     
     $.post("/orders",null,
 	   function(data, status){
-
 	       
 	       //Here we make a variable called tr that we will append into the
 	       //html file. Basically we are writing html code here and looping through
@@ -27,7 +26,8 @@ function dataFunction(){
 }
 
 function main(){
-    $("#dataButton").on('click', dataFunction);
+	//$("#dataButton").on('click', dataFunction);
+	dataFunction();
 }
 
 
