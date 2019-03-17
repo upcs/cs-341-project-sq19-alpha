@@ -3,7 +3,6 @@ function dataFunction(){
     
     $.post("/orders",null,
 	   function(data, status){
-
 	       
 	       //Here we make a variable called tr that we will append into the
 	       //html file. Basically we are writing html code here and looping through
@@ -11,19 +10,24 @@ function dataFunction(){
 	       
 	       var tr = " ";
 	       
-	       for (var i = 0; i<data.length; i++)
+	       for (var i = 1; i<data.length; i++)
 	       {
-		  tr += "<tr>"+"<td>" + data[i].address + "</td>"+"</tr>"; 
+		   tr += "<tr>"+"<td>" + data[i].name+ "</td>"+
+		       "<td>"+ data[i].address+"</td>"
+		       +"<td>"+ data[i].tier+"</td>"+"</tr>"; 
 	       }
-	       
+	      
 	       $("#myData").append(tr);
+
+	
 	       
 	   }, "json");
     
 }
 
 function main(){
-    $("#dataButton").on('click', dataFunction);
+	//$("#dataButton").on('click', dataFunction);
+	dataFunction();
 }
 
 

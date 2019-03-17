@@ -4,23 +4,20 @@
 <head>
 	<link rel="stylesheet" href="stylesheets/style.css">
 	<script type="text/javascript" src="javascripts/sum.js"></script>
-<<<<<<< HEAD
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/> </script>
-        <script type="text/javascript" src="javascripts/tableFunction.js"></script>
-        <script> $(document).ready(main) </script>
-	<link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
-=======
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 	</script>
 	<script type="text/javascript" src="javascripts/tableFunction.js"></script>
 	<script> $(document).ready(main) </script>
 
->>>>>>> master
 </head>
 
-<body
-	style="background: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-Background-Images-2.png)"  id="tierOneBody">
 
+<<<<<<< HEAD
+<body style = "background: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-Background-Images-2.png)" id="tierOneBody">
+=======
+<body
+	style="background: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-Background-Images-2.png)">
+>>>>>>> master
 
 
 
@@ -34,6 +31,7 @@
 <ul>
   <li><a href="./index.html">Home</a></li>
   <li><a href="./about.html">About</a></li>
+  <li><a href="./findRoute.html">Find Route</a></li>
   <li><a href="./extra.html">Extra Info</a></li>
 </ul>
 
@@ -51,18 +49,32 @@
     <!-- Temp text (to be edited later) -->
     <!-- need actual data from databases here, using the new types of buildings or only some of them --> 
     <!--Data table to be filled -->
-    <button id="dataButton"> Fill Table </button>
-    <table id="myData">
-      
-      <tr> 
+    <button id="dataButton"> Show me the data! </button>
+    <br>
+    </br>
+      <table id="myData" class="dataTable" align="center">
+	<thead>
+	  <tr>
+	    <th>
+	      Facility Name
+	    </th>
+	    <th>
+	      Facility Address
+	    </th>
+	    <th>
+	      Tier Rank
+	    </th>
+	    
 	  </tr>
+	</thead>
       
-    </table>
+      </table>
+ 
     
   </body>
   
+</html>
 =======
-
 	<ul>
 		<li><a href="./index.html">Home</a></li>
 		<li><a href="./about.html">About</a></li>
@@ -85,8 +97,7 @@
 	<!-- need actual data from databases here, using the new types of buildings or only some of them -->
 	<!--Data table to be filled -->
 	<button id="dataButton"> Show me the data! </button>
-	<br></br>
-	<table id="myData" class="dataTable" align="center">
+	<table id="myData" class="dataTable">
 		<thead>
 			<tr>
 				<th>
@@ -106,6 +117,5 @@
 
 </body>
 
->>>>>>> master
 </html>
-
+>>>>>>> master

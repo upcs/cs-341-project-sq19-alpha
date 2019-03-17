@@ -2,12 +2,12 @@ body {
     /*background: url("http://hdqwalls.com/wallpapers/st-johns-bridge-of-portland-m3.jpg");*/
     background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom: 100px;
 }
 
 h1 {
     color: #62B6DB;
-    font-family: Century Gothic, sans serif;
+    font-weight: bold; 
+    font-family: "Georgia";
     text-align: center; 
 }
   
@@ -201,10 +201,6 @@ h2{
   color: white;
 }
 
-.row {
-  padding-bottom: 100px;
-}
-
 .centered {
   position: absolute;
   top: 12%;
@@ -301,7 +297,7 @@ body {
 	margin-right:auto; 
 	width:35%;
 	width: 150px; 
-	height:175px;
+	height:150px;
 }
 
 
@@ -504,10 +500,6 @@ body {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-#tierOneBody{
-    text-align: center;
-}
-
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
@@ -568,9 +560,6 @@ li {
 li a {
   display: block;
   color: white;
-  font-family: "Bookman Old Style";
-  font-style: bold;
-  font-size: 20px;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;

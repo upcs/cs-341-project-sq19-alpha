@@ -1,29 +1,29 @@
-
 <!DOCTYPE html>
 <html>
-  
- <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./stylesheets/style.css">
-    <script type="text/javascript" src="./javascripts/index.js"></script>
-    <style>
-      html,
-      body {
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <script type="text/javascript" src="./javascripts/index.js"></script>
+  <style>
+    html,
+    body {
       background-image: url("https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-Background-Images-2.png");
       background-repeat: no-repeat;
       background-size: cover;
-      }
-    </style>
-  </head>
+    }
+  </style>
+</head>
 
-  
-  <body>   
 
-	<image src="Logo1.png" width="200" height="200" class="cropping">  
+<body>
 
-<p id="links">
-    <!-- To move through various pages
+  <image src="Logo1.png" width="200" height="200" class="cropping">
+
+    <p id="links">
+      <!-- To move through various pages
 	 Includes: Home link, About link, and link to a new page when Find My Route button is clicked-->
+<<<<<<< HEAD
 <ul>
   <li><a href="./about.html">About</a></li>
   <li><a href="./TierOne.html">Facilities</a></li>
@@ -59,9 +59,53 @@
 	  </div></br>
 	  
 	</center>
+=======
+      <ul>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./TierOne.html">Facilities</a></li>
+        <li><a href="./findRoute.html">Find Route</a></li>
+        <li><a href="./extra.html">Extra Info</a></li>
+        <li style="float:right"><a class="active" href="./login.html">Gov Login</a></li>
+      </ul>
+      <br></br>
+
+
+      <center>
+
+
+
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe width="600" height="500" id="gmap_canvas"
+              src="https://maps.google.com/maps?q=portand&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+              scrolling="no" marginheight="0" marginwidth="0">
+            </iframe>
+            <a href="https://www.crocothemes.net">amazing wordpress websites
+            </a>
+          </div>
+          <style>
+            .mapouter {
+              text-align: right;
+              height: 500px;
+              width: 600px;
+            }
+
+            .gmap_canvas {
+              overflow: hidden;
+              background: none !important;
+              height: 500px;
+              width: 600px;
+            }
+          </style>
+        </div></br>
+
+        <br><button type="button" id="findMyRoute" onclick="location.href='./findRoute.html';">Find My
+          Route</button><br>
+      </center>
+>>>>>>> master
       </div>
-	  
-	 
-  </body>
-  
+
+
+</body>
+
 </html>
