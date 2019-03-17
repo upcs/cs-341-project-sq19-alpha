@@ -19,9 +19,15 @@ h1 {
 
 .mapouter{
     border: 2px solid blue;
+    text-align: right;
+    height: 500px;
+    width: 600px;
 }
 .gmap_canvas{
     border: 3px solid black;
+    height: 500px;
+    width: 600px;
+    overflow: hidden;
 }
 #findMyRoute{
     border: none;
