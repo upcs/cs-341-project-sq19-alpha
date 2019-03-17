@@ -40,6 +40,22 @@ h1 {
     color: #000;
 
 }
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  margin-top: 10px;
+  padding: 10px 11px 10px 13px;
+  text-overflow: ellipsis;
+  width: 300px;
+  height: 40px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
 
 
 h2{
