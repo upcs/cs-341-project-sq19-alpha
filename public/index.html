@@ -27,14 +27,23 @@
 <ul>
   <li><a href="./about.html">About</a></li>
   <li><a href="./TierOne.html">Facilities</a></li>
-  <li><a href="./findRoute.html">Find Route</a></li>
   <li><a href="./extra.html">Extra Info</a></li>
   <li style="float:right"><a class="active" href="./login.html">Gov Login</a></li>
 </ul>
 <br></br> 
 
 	
-	<center>
+<center>
+
+  	<form>
+	Address:<br> <!-- for user to enter zipcode (to be used in route generation) -->
+	<input type="text" id="zipcode" name="address">
+		<br>
+	Tier One:<br> <!-- for user to enter email (to send pdf copy of route info if desired) -->
+	<input type="text" name="TierOneAddress">
+	<br><br>
+	<input id="submitAddButton" type="submit" value="Submit" onclick="submitZip()">
+				</form>
 	  
 	  
 	  
@@ -49,7 +58,6 @@
 	    </style>
 	  </div></br>
 	  
-	  <br><button type="button" id="findMyRoute" onclick="location.href='./findRoute.html';">Find My Route</button><br>
 	</center>
       </div>
 	  
