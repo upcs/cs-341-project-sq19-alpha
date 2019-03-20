@@ -30,7 +30,8 @@ function initializeAddresses(geocoder, map) {
         geocoder = new google.maps.Geocoder();
         geocoder.geocode({ 'address': data[i].address }, function (results, status) {
           var latLng = { lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() };
-          alert("Coordinates are: ("+latLng.lat+","+latLng.lng+")");
+            alert("Coordinates are: ("+latLng.lat+","+latLng.lng+")");
+	    console.log("Coordinates are: ("+latLng.lat+","+latLng.lng+")");
           if (status == 'OK') {
             var myLatLng = new google.maps.LatLng(latLng.lat, latLng.lng);
             var marker = new google.maps.Marker({
@@ -49,7 +50,7 @@ function initializeAddresses(geocoder, map) {
 
 }
 
-
+/*
 function codeAddress(geocoder, map, facilityAddrs) {
 
   for (var i = 0; i < facilityAddrs.length; i++) {
@@ -72,7 +73,7 @@ function codeAddress(geocoder, map, facilityAddrs) {
     });
   }
 }
-
+*/
 
 
 
