@@ -74,6 +74,9 @@
             // parameter when you first load the API. For example:
             // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
+	    var geocoder;
+	    	var address = "Portland";
+
             function initAutocomplete() {
               var map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 45.5122, lng: -122.6587 },
@@ -81,8 +84,8 @@
                 mapTypeId: 'roadmap'
               });
 
-              // Create the search box and link it to the UI element.
-              var input = document.getElementById('pac-input');
+		// Create the search box and link it to the UI element.
+		var input = document.getElementById('pac-input');
               var searchBox = new google.maps.places.SearchBox(input);
               map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
@@ -114,7 +117,7 @@
                     console.log("Returned place contains no geometry");
                     return;
                   }
-                  var icon = {
+		                  var icon = {
                     url: place.icon,
                     size: new google.maps.Size(71, 71),
                     origin: new google.maps.Point(0, 0),
@@ -139,8 +142,39 @@
                 });
                 map.fitBounds(bounds);
               });
+	
             }
 
+	    function callingAddress(){
+	  
+	
+		alert("hi");
+	    geocoder = new google.maps.Geocoder();
+		codeAddress(geocoder, map);
+		alert("hi2");
+
+	    }
+	    
+	    function codeAddress(geocoder, map) {
+		alert("hi3");
+        geocoder.geocode({'address': address}, function(results, status) {
+            alert( "results"+results[0]);
+        var latLng = {lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()};
+	    alert(results[0].geometry.location.lat());
+        if (status == 'OK') {
+            var marker = new google.maps.Marker({
+                position: latLng,
+                map: map
+            });
+            console.log (map);
+        } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+        }
+    });
+	    }
+
+
+	    
           </script>
           <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAHAVcAEo6JCug4Fm2Bzw156mvETaQgD8&libraries=places&callback=initAutocomplete"
           async defer></script>
@@ -150,8 +184,9 @@
 
         </div></br>
 
-        <br><button type="button" id="findMyRoute" onclick="location.href='./findRoute.html';">Find My
-          Route</button><br>
+        <br><button type="button" id="findMyRoute" onclick="location.href='./printPDF.html';">Print PDF Version</button><br>
+
+	 <br><button type="button" id="showAddress" onclick="callingAddress()">Show all Tier One!</button><br>
       </center>
       </div>
 
