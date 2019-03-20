@@ -37,15 +37,32 @@
 	<p>
 		<script>myfunction();</script>
 	</p>
-
-
-
-
+	  
+	 
+	  <!-- The Modal -->
+	  <div id="myDataModal" class="modal">
+	    
+	    <!-- Modal content -->
+	    <div class="data-modal-content">
+	      <span class="data-closeButton" onclick="hideDataModal()">&times;</span>
+	      <div class="card">
+		<img src="http://pamplinmedia.com/images/artimg/00003607339534.jpg" style="width:100%">
+		<h1 id="selectedName">Place Holder</h1>
+		<p class="selectedAddress">0000 N Portland</p>
+		<p id="selectedLocation" >Some text about the facility..</p>
+	
+	      </div>
+	      
+	      <br></br>
+	    </div>
+	    
+	  </div>
+	
 	<!-- Temp text (to be edited later) -->
 	<!-- need actual data from databases here, using the new types of buildings or only some of them -->
 	<!--Data table to be filled -->
-	<button id="dataButton"> Show me the data! </button>
-	<br></br>
+	<input type="text" id="myInput" onkeyup="filterFunction()" placeholder="Search for names..">
+	
 	<table id="myData" class="dataTable" align="center">
 		<thead>
 			<tr>

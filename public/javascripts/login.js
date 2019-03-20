@@ -19,7 +19,7 @@ function goToHome() {
     var loginForm = document.getElementById('loginForm');
     
     if (isValidUnamePass(usernameVal, passwordVal)) {
-	loginForm.action = "indexLoggedIn.html";
+	loginForm.action = "/indexLoggedIn.html";
 
     }
     else { // Otherwise...
