@@ -4,6 +4,10 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./stylesheets/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+  <script type="text/javascript" src="javascripts/map.js"></script>
+  <script> $(document).ready(main) </script>
   <!--<script type="text/javascript" src="./javascripts/index.js"></script>-->
   <style>
     html,
@@ -24,20 +28,20 @@
       <!-- To move through various pages
 	 Includes: Home link, About link, and link to a new page when Find My Route button is clicked-->
 
-    <ul>
-      <li><a href="./about.html">About</a></li>
-      <li><a href="./TierOne.html">Facilities</a></li>
-      <li><a href="./extra.html">Extra Info</a></li>
-      <li style="float:right"><a class="active" href="./login.html">Gov Login</a></li>
-      <li style="float:right"><a href="./register.html">Gov Register</a></li>
-    </ul>
-    <br></br> 
+      <ul>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./TierOne.html">Facilities</a></li>
+        <li><a href="./extra.html">Extra Info</a></li>
+        <li style="float:right"><a class="active" href="./login.html">Gov Login</a></li>
+        <li style="float:right"><a href="./register.html">Gov Register</a></li>
+      </ul>
+      <br></br>
 
 
 
       <center>
 
-          <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
 
         <div class="mapouter">
           <div class="gmap_canvas" id="map">
@@ -57,13 +61,13 @@
 
             .gmap_canvas {
               overflow: hidden;
-              background: none !important;
+              background: none;
               height: 500px;
               width: 600px;
             }
           </style>
 
-          
+
 
           <script>
             // This example adds a search box to a map, using the Google Place Autocomplete
@@ -74,9 +78,8 @@
             // parameter when you first load the API. For example:
             // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
-	    var geocoder;
-	    	var address = "Portland";
 
+            var markers;
             function initAutocomplete() {
               var map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 45.5122, lng: -122.6587 },
@@ -94,7 +97,8 @@
                 searchBox.setBounds(map.getBounds());
               });
 
-              var markers = [];
+              //var markers = [];
+              markers = [];
               // Listen for the event fired when the user selects a prediction and retrieve
               // more details for that place.
               searchBox.addListener('places_changed', function () {
@@ -125,6 +129,7 @@
                     scaledSize: new google.maps.Size(25, 25)
                   };
 
+                  alert(place.geometry.location);
                   // Create a marker for each place.
                   markers.push(new google.maps.Marker({
                     map: map,
@@ -145,48 +150,21 @@
 	
             }
 
-	    function callingAddress(){
-	  
-	
-		alert("hi");
-	    geocoder = new google.maps.Geocoder();
-		codeAddress(geocoder, map);
-		alert("hi2");
 
-	    }
-	    
-	    function codeAddress(geocoder, map) {
-		alert("hi3");
-        geocoder.geocode({'address': address}, function(results, status) {
-            alert( "results"+results[0]);
-        var latLng = {lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()};
-	    alert(results[0].geometry.location.lat());
-        if (status == 'OK') {
-            var marker = new google.maps.Marker({
-                position: latLng,
-                map: map
-            });
-            console.log (map);
-        } else {
-            alert('Geocode was not successful for the following reason: ' + status);
-        }
-    });
-	    }
-
-
-	    
           </script>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAHAVcAEo6JCug4Fm2Bzw156mvETaQgD8&libraries=places&callback=initAutocomplete"
-          async defer></script>
+          <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAHAVcAEo6JCug4Fm2Bzw156mvETaQgD8&libraries=places&callback=initAutocomplete"
+            async defer></script>
 
 
 
 
         </div></br>
 
+
         <br><button type="button" id="findMyRoute" onclick="location.href='./printPDF.html';">Print PDF Version</button><br>
 
-	 <br><button type="button" id="showAddress" onclick="callingAddress()">Show all Tier One!</button><br>
+
       </center>
       </div>
 
