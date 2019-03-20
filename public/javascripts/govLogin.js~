@@ -1,0 +1,22 @@
+function registerFunction() {
+    
+    var inp = $("email").val();
+    var myTopping = $('password').attr("id");
+    var myQuantity = $('passwordrepeat').text();
+    alert (inp);
+    
+}
+
+
+    
+ 
+
+
+/*This function links all of the js functions to their respective
+  buttons. */
+function main(){    
+    $("#confirmButton").on('click', registerFunction);
+}
+
+
+/* End of file */
