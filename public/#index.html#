@@ -166,7 +166,6 @@
                
             });
             console.log (map);
-            alert("hi");
         } else {
             alert('Geocode was not successful for the following reason: ' + status);
         }
@@ -186,7 +185,7 @@
 
         <br><button type="button" id="findMyRoute" onclick="location.href='./printPDF.html';">Print PDF Version</button><br>
 
-	 <br><button type="button" id="showAddress" onclick="callingAddress()">Show all Tier One!</button><br>
+	 <br><button type="button" id="showAddress" onclick="callingAddress()">Show all Tier Ones!</button><br>
       </center>
       </div>
 
