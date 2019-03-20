@@ -1,5 +1,4 @@
 //-------------------------------------------------------------------------------------
-//<link rel="stylesheet" href="./stylesheets/style.css">
 
 function isValidUnamePass(uname, pass) {
 	var validUsername = /^[a-z]*(.gov)$/;
