@@ -61,7 +61,7 @@
 
             .gmap_canvas {
               overflow: hidden;
-              background: none !important;
+              background: none;
               height: 500px;
               width: 600px;
             }
@@ -78,6 +78,7 @@
             // parameter when you first load the API. For example:
             // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
+
             var markers;
             function initAutocomplete() {
               var map = new google.maps.Map(document.getElementById('map'), {
@@ -86,8 +87,8 @@
                 mapTypeId: 'roadmap'
               });
 
-              // Create the search box and link it to the UI element.
-              var input = document.getElementById('pac-input');
+		// Create the search box and link it to the UI element.
+		var input = document.getElementById('pac-input');
               var searchBox = new google.maps.places.SearchBox(input);
               map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
@@ -120,7 +121,7 @@
                     console.log("Returned place contains no geometry");
                     return;
                   }
-                  var icon = {
+		                  var icon = {
                     url: place.icon,
                     size: new google.maps.Size(71, 71),
                     origin: new google.maps.Point(0, 0),
@@ -146,9 +147,9 @@
                 });
                 map.fitBounds(bounds);
               });
+	
             }
 
-            
 
           </script>
           <script
@@ -160,9 +161,10 @@
 
         </div></br>
 
-        
-        <br><button type="button" id="findMyRoute" onclick="location.href='./findRoute.html';">Find My
-          Route</button><br>
+
+        <br><button type="button" id="findMyRoute" onclick="location.href='./printPDF.html';">Print PDF Version</button><br>
+
+
       </center>
       </div>
 
