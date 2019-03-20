@@ -686,3 +686,57 @@ li a:hover:not(.active) {
   background-color: #779ADC;
 
 }
+/***************************** PRINT POP UP ************************/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.closeButton {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeButton:hover {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#exportButton{
+    border: none;
+    outline: none;
+    height: 30px;
+   
+    background: #258afb;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 15px;
+}
+#exportButton:hover
+{
+    cursor: pointer;
+    background: #ffc1067;
+    color: #000;
+
+}
+

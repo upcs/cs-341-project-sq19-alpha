@@ -1,4 +1,6 @@
 //-------------------------------------------------------------------------------------
+//<link rel="stylesheet" href="./stylesheets/style.css">
+
 function isValidUnamePass(uname, pass) {
 	var validUsername = /^[a-z]*(.gov)$/;
 	var validPassword = /^[a-z]*(.gov)$/;
@@ -11,18 +13,20 @@ function isValidUnamePass(uname, pass) {
 }
 
 function goToHome() {
-	var username = document.getElementById('username');
-	var password = document.getElementById('password');
-	var usernameVal = username.value;
-	var passwordVal = password.value;
-	var loginForm = document.getElementById('loginForm');
+    var username = document.getElementById('username');
+    var password = document.getElementById('password');
+    var usernameVal = username.value;
+    var passwordVal = password.value;
+    var loginForm = document.getElementById('loginForm');
+    
+    if (isValidUnamePass(usernameVal, passwordVal)) {
+	loginForm.action = "indexLoggedIn.html";
 
-	if (isValidUnamePass(usernameVal, passwordVal)) {
-		loginForm.action = "govHome.html";
-	}
-	else { // Otherwise...
-		alert('WARNING: Must enter a valid username AND password.');
-	}
+    }
+    else { // Otherwise...
+	alert('WARNING: Must enter a valid username AND password.');
+    }
 }
+
 
 module.exports = {isValidUnamePass:isValidUnamePass};

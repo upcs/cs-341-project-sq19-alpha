@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <script type="text/javascript" src="js/index.js"></script>
+  <script type="text/javascript" src="./javascripts/extra.js"></script>
+</head>
+
+
+<body
+  style="background-image:url('https://venngage-wordpress.s3.amazonaws.com/uploads/2018/09/Simple-Background-Images-2.png');">
+
+  <center>
+    <img src="smallLogo.png" height="75" width="75">
+    <h1>Natual Disaster Information</h1>
+    <ul>
+      <li><a href="./indexLoggedIn.html">Home</a></li>
+      <li><a href="./TierOneLoggedIn.html">Facilities</a></li>
+      <li><a href="./aboutLoggedIn.html">About</a></li>
+    </ul>
+
+
+  </center>
+
+  <p>
+    <script>myfunction();</script>
+  </p>
+
+  <br></br>
+  <br></br>
+  <div class="aboutDiv">
+
+    <div class="centered">
+      <p id="extraAbout">
+        The most common natural diasters in Oregon are earthquakes, landslides, tsunamis, and floods. The following page
+        contains information about how to react in a natural disaster. It is meant to be used by the City of Portland
+        before a natural disaster occurs in order to prep. If you ever unsure what to do during a disaster find the
+        nearest city official and ask them for help.
+      </p>
+    </div>
+  </div>
+
+
+  <!--The following sources were used for information on natural disasters:
+          https://io9.gizmodo.com/10-practical-tips-for-surviving-the-zombie-apocalypse-5148637
+          https://www.ready.gov/wildfires
+          http://www.susquehannafloodforecasting.org/before-during-after.html
+          http://www.eo.ucar.edu/kids/dangerwx/tornado5.htm
+          https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/tsunami.html
+          http://www.weatherwizkids.com/weather-safety-earthquake.htm
+        -->
+  <br></br>
+  <br></br>
+
+
+  <!--The following was gotten from the resource https://www.w3schools.com/howto/howto_js_lightbox.asp -->
+
+
+  <h2 style="text-align:center">Select a Natural Disaster </h2>
+
+  <div class="row">
+    <div class="column">
+      <img src="landslide.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="earthquake.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="tsunami.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+      <img src="flooding.jpg" style="width:100%" style="height: 300px" onclick="openModal();currentSlide(4)"
+        class="hover-shadow cursor">
+    </div>
+  </div>
+
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="landslide.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="earthquake.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="tsunami.jpg" style="width:100%">
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="flooding.jpg" style="width:100%">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+
+      <div class="column">
+        <img class="demo cursor" src="landslide.jpg" style="width:100%" style="width:100%" onclick="currentSlide(1)"
+          alt="Landslide:<br></br> 1.Stay alert and awake 2. Keep listening to the weather radio or a portable, battery-powered radio for warnings 3. Listen for any unusual sounds that might indicate moving debris 4. Try to stay on higher ground">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="earthquake.jpg" style="width:100%" onclick="currentSlide(2)"
+          alt="Earthquake:<br></br>  1.Choose a safe place in every room, best to get under a sturdy piece of furniture.2.During the event of an earthquake, drop, cover and hold on. Stay indoors until the shaking stops. 3.Stay away from windows.4.expect aftershocks! ">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="tsunami.jpg" style="width:100%" onclick="currentSlide(3)" alt="Tsunami:<br></br>1.Go as high and far as you can. 2. A tsunami warning: a tsunami may have been generated
+          and could be close to your area.
+          3. A tsunami watch: tsunami has not been verified but could exist.
+          4.Avoid downed power lines
+          and get to higher ground. ">
+
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="flooding.jpg" style="width:100%" onclick="currentSlide(4)" alt="Flooding:<br></br> 1.Climb to safety immediately, get out of low aread subject to flooding.
+          2. If driving don't go through flooded roadways. 
+          3. Assemble your disaster supplies. Be prepared to evacuate, identify places to go. 
+          4. Fill your car's gas tank. And if you're told to leave, do so quickly!">
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
