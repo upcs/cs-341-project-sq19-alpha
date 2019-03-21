@@ -4,6 +4,9 @@ var address = "Portland";
 var facilityAddrs = [];
 var tempCount = 0;
 
+const sleep = (milliseconds) => {
+  return new Promise(resolve => setTimeout(resolve, milliseconds))
+}
 
 //under everything else
 function callingAddress() {
@@ -26,28 +29,35 @@ function initializeAddresses(geocoder, map) {
         Go through the data, convert each address into coordinates, then place a marker on the 
         map and reset the map (with the new marker)
       */
-      for (var i = 1; i < data.length; i++) {
-        geocoder = new google.maps.Geocoder();
-        geocoder.geocode({ 'address': data[i].address }, function (results, status) {
-          var latLng = { lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() };
-            alert("Coordinates are: ("+latLng.lat+","+latLng.lng+")");
-	    console.log("Coordinates are: ("+latLng.lat+","+latLng.lng+")");
-          if (status == 'OK') {
-            var myLatLng = new google.maps.LatLng(latLng.lat, latLng.lng);
-            var marker = new google.maps.Marker({
-              position: myLatLng,
-              map: map
-            });
-            marker.setMap(map);
-          } 
-          else {
-            window.console.error("geocode request failed with: " + status);
-          }
-        });
-      }
-
+	    for (var i = 1; i < data.length; i++) {
+			
+		geocoder = new google.maps.Geocoder();
+		
+		/*Data is correct as of right HERE*/
+		geocoder.geocode({ 'address': data[i].address }, function (results, status) {
+		    var latLng = { lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() };
+		    
+		    
+		    console.log("Coordinates are: ("+latLng.lat+","+latLng.lng+")");
+		    
+		    if (status == 'OK') {
+			var myLatLng = new google.maps.LatLng(latLng.lat, latLng.lng);
+			var marker = new google.maps.Marker({
+			    position: myLatLng,
+			    map: map
+			});
+			marker.setMap(map);
+		    } 
+		    else {
+			window.console.error("geocode request failed with: " + status);
+		    }
+		});
+		
+		
+	    }
+	
     }, "json");
-
+    
 }
 
 /*
