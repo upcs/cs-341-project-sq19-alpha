@@ -7,6 +7,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="javascripts/login.js"></script>
 	<script type="text/javascript" src="javascripts/login.test.js"></script>
+	<script type="text/javascript" src="javascripts/changeAccount.js"></script>
 	<style>
 		html,
 		body {
@@ -25,8 +26,8 @@
 </head>
 
 <body>
-
-	<div id="loginId" class="loginbox">
+  <div id= "wholeThing">
+    <div id="loginId" class="loginbox">
 
 		<img src="https://seeklogo.com/images/R/rose-bowl-logo-64F46B5969-seeklogo.com.png" class="avatar">
 		<h1 class="logintitle">Login Here </h1>
@@ -38,13 +39,14 @@
 			<p> Password </p>
 			<input type="password" id="password" name="" placeholder="Enter Password">
 
-			<input type="submit" value="Login" id="loginButton" onclick="goToHome()">
+			<input type="submit" value="Login" id="loginButton" onclick="goToHome();changeAccount();">
 			<a href="index.html"> Lost your password? </a><br>
 			<a href="index.html"> Skip Login</a>
 
 		</form>
 
-	</div>
+    </div>
+  </div>
 </body>
 
 </html>
