@@ -255,26 +255,32 @@ input[type="text"]:focus, input[type="password"]:focus {
 
 .cancelbtn {
  
-    background-color: #f44336;
-    
-    border: none;
-    outline: none;
-    height: 40px;   
-    color: #fff;
-    font-size: 18px;
-    border-radius: 20px;
    
+    background-color: #779ADC;
+    padding: 8px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:20px;
+    cursor:pointer;
+    color: white;
 	
+}
+.cancelbtn:hover, .signupbtn:hover
+{
+    cursor: pointer;
+    background: #ffc1067;      
+    color: #000;
+
 }
 .signupbtn {
 
-	 border: none;
-    outline: none;
-    height: 40px;
-    background:  #779ADC;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 20px;
+    background-color: #779ADC;
+    padding: 8px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:20px;
+    cursor:pointer;
+    color: white;
    
 	
 }
