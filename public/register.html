@@ -3,7 +3,9 @@
 
 <head>
 	<link rel="stylesheet" href="./stylesheets/style.css">
-
+	<script type="text/javascript" src="javascripts/register.js"></script>
+<!-- 	<script type="text/javascript" src="javascripts/register.test.js"></script>
+ -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<style>
 		html,
@@ -32,13 +34,13 @@
 		<p>Please fill in this form to create a Gov account</p>
 		<hr>
 		<label for="email"><b>Email</b></label>
-		<input type="text" placeholder="Enter Email" name="email" required>
+		<input id = "userEmail" type="text" placeholder="Enter Email" name="email" required>
 		
 		<label for="psw"><b>Password</b></label>
-		<input type="password" placeholder="Enter Password" name="psw" required>
+		<input id = "userPwd" type="password" placeholder="Enter Password" name="psw" required>
 		
 		<label for="psw-repeat"><b>Repeat Password</b></label>
-		<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+		<input id = "userPwdR" type="password" placeholder="Repeat Password" name="psw-repeat" required>
 		
 <!--
 		<label>
@@ -51,7 +53,7 @@
 			
 		<div>
 			<button type="button" class="cancelbtn">Cancel</button>
-			<button	type="submit" class="signupbtn">Sign Up</button>
+			<button	type="submit" class="signupbtn" onclick = "validate()">Sign Up</button>
 		</div>
 	
 	
