@@ -4,12 +4,20 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="javascripts/popup.js"></script>
+
   <link rel="stylesheet" href="./stylesheets/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/map.js"></script>
   <script> $(document).ready(main) </script>
 
   <!--<script type="text/javascript" src="./javascripts/index.js"></script>-->
+
+  <script type="text/javascript" src="javascripts/exportPDF.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+ 
+
   <style>
     html,
     body {
@@ -176,10 +184,10 @@
 	<div id="myModal" class="modal">
 	  
 	  <!-- Modal content -->
-	  <div class="modal-content">
+	  <div class="modal-content" id="route_div">
 	    <span class="closeButton" onclick="hidePop()">&times;</span>
 	    
-	    <button style="float:left" id ="exportButton"> Export as a PDF </button>
+	    <button style="float:left" id ="exportButton" onclick="savePDF()"> Export as a PDF </button>
 	    <br></br>
 	    <img src="Route.jpg" id="fakeRoute">
 	  </div>
