@@ -70,7 +70,7 @@ function validate() {
 	}
 
 }
-const $ = require('jquery');
+window.$ = window.jQuery = require('jquery');
 
 $( document ).ready(function() {
 
