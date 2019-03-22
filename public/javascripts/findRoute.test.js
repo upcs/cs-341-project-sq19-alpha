@@ -18,23 +18,22 @@ describe('isValidZip suite', function () {
 	});
 });
 
-/*
-jest.mock('./index');
-test('check for valid zipcode', () => {
 
-	const submitZip = index.submitZip;//require('./index');
+// jest.mock('./index');
+// test('check for valid zipcode', () => {
 
-	// Tell the fetchCurrentUser mock function to automatically invoke
-	// its callback with some data
-	submitZip.mockImplementation(cb => {
-		cb({
-			textValue: '12345'
-		});
-	});
+// 	const submitZip = index.submitZip;//require('./index');
 
-	$("#submitZipButton").click();
-	expect(submitZip).toBeCalled();
+// 	// Tell the fetchCurrentUser mock function to automatically invoke
+// 	// its callback with some data
+// 	submitZip.mockImplementation(cb => {
+// 		cb({
+// 			textValue: '12345'
+// 		});
+// 	});
 
-});
+// 	$("#submitZipButton").click();
+// 	expect(submitZip).toBeCalled();
 
-*/
+// });
+
