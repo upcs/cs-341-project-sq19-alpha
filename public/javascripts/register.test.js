@@ -1,3 +1,4 @@
+
 const register = require('./register');
 
 describe('isValidUsername suite', function () {

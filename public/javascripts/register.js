@@ -70,7 +70,7 @@ function validate() {
 	}
 
 }
-
+const $ = require('jquery');
 
 $( document ).ready(function() {
 
@@ -135,4 +135,4 @@ $( document ).ready(function() {
 
 
 
-module.exports = { isValidPassword: isValidPassword, isValidUsername: isValidUsername, isValidRepPsw:isValidRepPsw };
+module.exports = { isValidPassword: isValidPassword, isValidUsername: isValidUsername, isValidRepPsw:isValidRepPsw};
