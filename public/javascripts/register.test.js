@@ -1,3 +1,4 @@
+window.$ = window.jQuery = require('jquery');
 
 const register = require('./register');
 

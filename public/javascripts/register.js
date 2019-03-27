@@ -1,3 +1,5 @@
+
+
 function isValidUsername(uname) {
 	var validUsername = /^[a-z]*(.gov)$/;
 	if (uname.match(validUsername)) {
@@ -70,7 +72,7 @@ function validate() {
 	}
 
 }
-window.$ = window.jQuery = require('jquery');
+
 
 $( document ).ready(function() {
 
