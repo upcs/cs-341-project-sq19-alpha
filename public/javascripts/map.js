@@ -24,14 +24,27 @@ function callingAddress() {
 function initializeAddresses(geocoder, map) {
   $.post("/orders", null,
     function (data, status) {
+
+      for( var i=1; i<data.length; i++){
+        var myLatLng = new google.maps.LatLng(data[i].x_coord, data[i].y_coord);
+
+            var marker = new google.maps.Marker({
+              position: myLatLng,
+              map: map
+            });
+            marker.setMap(map);
+      }
+      
+
+      /*
       for (var i = 1; i < 10; i++) {
-        /*
+        
         Go through the data, convert each address into coordinates, then place a marker on the 
         map and reset the map (with the new marker)
-      */
+      
         geocoder = new google.maps.Geocoder();
 
-        /*Data is correct as of right HERE*/
+        //Data is correct as of right HERE
         geocoder.geocode({ 'address': data[i].address }, function (results, status) {
           var latLng = { lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() };
 
@@ -43,17 +56,17 @@ function initializeAddresses(geocoder, map) {
               map: map
             });
             marker.setMap(map);
-            /*
+            
             google.maps.event.addListener(marker, "click", function(e){
               alert("Coordinates: "+myLatLng);
               //mapPop(data[i].name, data[i].address, myLatLng);
-            })*/
+            })
           }
           else {
             window.console.error("geocode request failed with: " + status);
           }
         });
-      }
+      }*/
 
     }, "json");
 }
