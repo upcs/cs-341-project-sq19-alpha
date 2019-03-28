@@ -1,4 +1,4 @@
-window.$ = window.jQuery = require('./node_modules/jquery');
+window.$ = window.jQuery = require('jquery');
 
 const register = require('./register');
 

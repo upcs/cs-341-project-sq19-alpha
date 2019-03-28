@@ -73,7 +73,7 @@ function validate() {
 
 }
 
-
+//window.$ = window.jQuery = require('./jquery');
 $( document ).ready(function() {
 
   const changeText = function (el, text, color) {
@@ -137,4 +137,4 @@ $( document ).ready(function() {
 
 
 
-module.exports = { isValidPassword: isValidPassword, isValidUsername: isValidUsername, isValidRepPsw:isValidRepPsw};
+module.exports = { isValidPassword: isValidPassword, isValidUsername: isValidUsername, isValidRepPsw:isValidRepPsw };
