@@ -25,18 +25,26 @@ function callingAddress() {
 function initializeAddresses(geocoder, map) {
   $.post("/orders", null,
     function (data, status) {
-
       for( var i=1; i<data.length; i++){
         //alert("in maps loop");
         var myLatLng = new google.maps.LatLng(data[i].y_coord, data[i].x_coord);
         //alert( "LatLng: "+myLatLng);
-
-
-            var marker = new google.maps.Marker({
+          var marker = new google.maps.Marker({
               position: myLatLng,
-              map: map
-            });
-            marker.setMap(map);
+	      map: map,
+              title:data[i].address
+          });
+          marker.setMap(map);
+	  
+	  var infowindow = new google.maps.InfoWindow({
+	   
+              content: '<p>Marker Location:' + marker.getTitle() + '</p>'
+	   
+           });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map, this);
+        });
       }
     }, "json");
 }
@@ -99,7 +107,10 @@ function initAutocomplete(map) {
                 });
                 map.fitBounds(bounds);
               });
-            }
+    
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
 
 function main() {
     callingAddress();
