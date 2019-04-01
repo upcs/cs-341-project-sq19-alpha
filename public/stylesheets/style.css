@@ -41,6 +41,8 @@ h1 {
 
 }
 #pac-input {
+  border: 2px;
+  border-color: #4d90fe;
   background-color: #fff;
   font-family: Roboto;
   font-size: 15px;

@@ -21,10 +21,6 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
-
-
-
-    
   </style>
 </head>
 
@@ -37,23 +33,24 @@
       <!-- To move through various pages
 	 Includes: Home link, About link, and link to a new page when Find My Route button is clicked-->
 
-    <ul>
-      <li><a href="./about.html">About</a></li>
-      <li><a href="./TierOne.html">Facilities</a></li>
-      <li><a href="./extra.html">Extra Info</a></li>
-      
-      <div id = "loginButtons">
-	<li style="float:right"><a class="active" href="./login.html">Gov Login</a></li>
-	<li style="float:right"><a href="./register.html">Gov Register</a></li>
-      </div>
-      
-    
-      
-    </ul>
-    <br></br> 
+      <ul>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./TierOne.html">Facilities</a></li>
+        <li><a href="./extra.html">Extra Info</a></li>
+
+        <div id="loginButtons">
+          <li style="float:right"><a class="active" href="./login.html">Gov Login</a></li>
+          <li style="float:right"><a href="./register.html">Gov Register</a></li>
+        </div>
 
 
 
+      </ul>
+      <br></br>
+
+
+    <!--The following was based off of code in the google maps source followed by the link below
+	Source:https://developers.google.com/maps/documentation/javascript/examples/places-searchbox --> 
 
       <center>
 
@@ -97,14 +94,16 @@
 
             var markers;
             function initAutocomplete() {
+              //alert("search box stuff");
+              /*
               var map = new google.maps.Map(document.getElementById('map'), {
                 center: { lat: 45.5122, lng: -122.6587 },
                 zoom: 13,
                 mapTypeId: 'roadmap'
               });
 
-		// Create the search box and link it to the UI element.
-		var input = document.getElementById('pac-input');
+              // Create the search box and link it to the UI element.
+              var input = document.getElementById('pac-input');
               var searchBox = new google.maps.places.SearchBox(input);
               map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
@@ -137,7 +136,7 @@
                     console.log("Returned place contains no geometry");
                     return;
                   }
-		                  var icon = {
+                  var icon = {
                     url: place.icon,
                     size: new google.maps.Size(71, 71),
                     origin: new google.maps.Point(0, 0),
@@ -162,15 +161,13 @@
                   }
                 });
                 map.fitBounds(bounds);
-              });
-	
+              });*/
             }
 
 
           </script>
           <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAHAVcAEo6JCug4Fm2Bzw156mvETaQgD8&libraries=places&callback=initAutocomplete"
-            ></script>
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAHAVcAEo6JCug4Fm2Bzw156mvETaQgD8&libraries=places&callback=initAutocomplete"></script>
 
 
 
@@ -182,19 +179,19 @@
 
         <br><button type="button" id="findMyRoute" onclick="modalPop()">Print PDF Version</button><br>
 
-	<!-- The Modal -->
-	<div id="myModal" class="modal">
-	  
-	  <!-- Modal content -->
-	  <div class="modal-content" id="route_div">
-	    <span class="closeButton" onclick="hidePop()">&times;</span>
-	    
-	    <button style="float:left" id ="exportButton" onclick="savePDF()"> Export as a PDF </button>
-	    <br></br>
-	    <img src="Route.jpg" id="fakeRoute">
-	  </div>
-	  
-	</div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content" id="route_div">
+            <span class="closeButton" onclick="hidePop()">&times;</span>
+
+            <button style="float:left" id="exportButton" onclick="savePDF()"> Export as a PDF </button>
+            <br></br>
+            <img src="Route.jpg" id="fakeRoute">
+          </div>
+
+        </div>
 
       </center>
       </div>
