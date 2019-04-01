@@ -72,9 +72,9 @@ function validate() {
 	}
 
 }
-
+function colored(){
 //window.$ = window.jQuery = require('./jquery');
-$( document ).ready(function() {
+$(document).ready(function colored() {
 
   const changeText = function (el, text, color) {
     el.text(text).css('color', color);
@@ -134,7 +134,8 @@ $( document ).ready(function() {
     } 
   }); 
 });
+}
 
 
 
-module.exports = { isValidPassword: isValidPassword, isValidUsername: isValidUsername, isValidRepPsw:isValidRepPsw };
+module.exports = { isValidPassword: isValidPassword, isValidUsername: isValidUsername, isValidRepPsw:isValidRepPsw, colored:colored};
