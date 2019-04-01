@@ -136,6 +136,10 @@ $(document).ready(function colored() {
 });
 }
 
+function newUser(){
+    $.post("/newLogin",{email: myEmail, password: myPassword},
+	   function(status){ }, "json");
+}
 
 
 module.exports = { isValidPassword: isValidPassword, isValidUsername: isValidUsername, isValidRepPsw:isValidRepPsw, colored:colored};
