@@ -17,13 +17,20 @@ h1 {
     text-align: center;  
 }
 
-
-.mapouter{
-    border: 2px solid blue;
-}
-.gmap_canvas{
+ .mapouter {
+   text-align: right;
+   height: 500px;
+   width: 600px;
+   border: 2px solid blue;
+ }
+ .gmap_canvas {
+   overflow: hidden;
+   background: none;
+   height: 500px;
+   width: 600px;
     border: 3px solid black;
-}
+ }
+
 #findMyRoute{
     border: none;
     outline: none;
