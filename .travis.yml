@@ -4,6 +4,7 @@ language:
 install:
   - npm install -g jest
   - npm install -g codecov
+  - npm install -g jquery
 node_js: 
   - "10"
 script: 
