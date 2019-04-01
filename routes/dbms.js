@@ -12,6 +12,7 @@ exports.version = '0.0.1';
 var mysql = require('mysql'),
     async = require('async');
 
+
 //var host = "104.198.11.53";  //from GCloud instance (this may change)
 //var database = "tier-one";
 //var user = "root";
@@ -20,6 +21,7 @@ var host = "35.236.96.52";  //from GCloud instance (this may change)
 var database = "CS341";
 var user = "student";
 var password = "intoPDX411";
+
 var dbclient;
 
 /**
