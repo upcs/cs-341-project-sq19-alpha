@@ -3,12 +3,16 @@ var geocoder;
 var address = "Portland";
 var facilityAddrs = [];
 var tempCount = 0;
-
+var input;
+var destination; 
+var directionsService;
+var directionsDisplay;
 const sleep = (milliseconds) => {
   return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
 
 //under everything else
+
 function callingAddress() {
   geocoder = new google.maps.Geocoder();
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -17,12 +21,37 @@ function callingAddress() {
     mapTypeId: 'roadmap'
   });
   initializeAddresses(geocoder, map);
-  initAutocomplete(map);
-  //alert("facility address 1= "+facilityAddrs[0]);
+    initAutocomplete(map);
+  
+    directionsService = new google.maps.DirectionsService();
+     directionsDisplay = new google.maps.DirectionsRenderer();
+     directionsDisplay.setMap(map);
+ 
+}
+alert(input.value);
+alert(destination);
+// ACTUALLY CALCULATING THE ROUTE
+function calcRoute() {
+  //WE WANT THE START VARIABLE TO BE THE INPUT OF THE USER IN THE SEARCH BAR
+    var start = input.value;
+    //alert(start);
+  //WE WANT THE END VARIABLE TO BE THE ADDRESS OF THE MARKER CLICKED
+    var end = destination;
+    //alert(end);
+  //THIS WILL CHANGE BASED OFF OF THE STUFF ON TOP
+  var request = {
+    origin: start,
+    destination: end,
+    travelMode: 'DRIVING'
+  };
+  directionsService.route(request, function(result, status) {
+    if (status == 'OK') {
+      directionsDisplay.setDirections(result);
+    }
+  });
 }
 
 
-//var markers = [];
 function initializeAddresses(geocoder, map) {
   $.post("/orders", null,
     function (data, status) {
@@ -38,8 +67,11 @@ function initializeAddresses(geocoder, map) {
         });
         var infowindow = new google.maps.InfoWindow();
         google.maps.event.addListener(marker, 'click', function () {
-          infowindow.setContent('<p>Marker Location:' + this.title + '</p>');
-          infowindow.open(map, this);
+          infowindow.setContent('<p>Location:' + this.title + '</p>');
+            infowindow.open(map, this);
+	    destination = this.title;
+	    //alert(destination);
+	    calcRoute();
       });
         marker.setMap(map);
       }
@@ -88,7 +120,8 @@ function initAutocomplete(map) {
         anchor: new google.maps.Point(17, 34),
         scaledSize: new google.maps.Size(25, 25)
       };
-      //alert(place.geometry.location);
+	//alert(place.geometry.location);
+	//alert(input.value);
       // Create a marker for each place.
       markers.push(new google.maps.Marker({
         map: map,
