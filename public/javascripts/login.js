@@ -13,6 +13,30 @@ function isValidUnamePass(uname, pass) {
 
 function retrieveUser(){
     
+    var username = document.getElementById('username');
+    var password = document.getElementById('password');
+    var usernameVal = username.value;
+    var passwordVal = password.value;
+    
+    $.post("/retrieveUser",null,
+	   function(data, status){
+	       	       
+	       for (var i = 1; i<data.length; i++)
+	       {
+		   if (usernameVal == data[i].email)
+		   {
+		       if (SHA1(passwordVal) == data[i].password)
+		       {
+			   gotoHome();  
+		       }
+		  
+		   }
+       
+	       }
+	       alert("wrong email or password");
+	    
+	       
+	   }, "json");
 }
 
 function goToHome() {
