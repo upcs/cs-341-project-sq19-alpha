@@ -11,6 +11,10 @@ function isValidUnamePass(uname, pass) {
 	}
 }
 
+function retrieveUser(){
+    
+}
+
 function goToHome() {
     var username = document.getElementById('username');
     var password = document.getElementById('password');
