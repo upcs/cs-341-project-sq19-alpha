@@ -8,6 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/map.js"></script>
   <script type="text/javascript" src="javascripts/exportPDF.js"></script>
+  <script type="text/javascript" src="javascripts/heatStuff.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
@@ -49,8 +50,8 @@
       <br></br>
 
 
-    <!--The following was based off of code in the google maps source followed by the link below
-	Source:https://developers.google.com/maps/documentation/javascript/examples/places-searchbox --> 
+      <!--The following was based off of code in the google maps source followed by the link below
+	Source:https://developers.google.com/maps/documentation/javascript/examples/places-searchbox -->
 
       <center>
 
@@ -69,6 +70,9 @@
           <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAHAVcAEo6JCug4Fm2Bzw156mvETaQgD8&libraries=places&callback=initAutocomplete"></script>
 
+          <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAHAVcAEo6JCug4Fm2Bzw156mvETaQgD8&libraries=visualization">
+            </script>
 
 
 
@@ -78,6 +82,8 @@
 
 
         <br><button type="button" id="findMyRoute" onclick="modalPop()">Print PDF Version</button><br>
+        <br><button type="button" id="heatMap" onclick="mainHeat()">Show Heat Map</button><br>
+
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
@@ -86,10 +92,12 @@
           <div class="modal-content" id="route_div">
             <span class="closeButton" onclick="hidePop()">&times;</span>
 
-            <button style="float:left" id="exportButton" onclick="savePDF()"> Export as a PDF </button>
+            <!--<button style="float:left" id="exportButton" onclick="savePDF()"> Export as a PDF </button>-->
+            <button style="float:left" id="exportButton" onclick="screenshot()"> Export as a PDF </button>
             <br></br>
             <img src="Route.jpg" id="fakeRoute">
           </div>
+          <div id="editor"></div>
 
         </div>
 

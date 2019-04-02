@@ -14,12 +14,11 @@ function queryData(data, res) {
 
     var array = [];
 
-    for (var i = 1; i < data.length; i++) {
-
-        array.push({ x_coord: data[i].X, y_coord: data[i].Y, address: data[i].address, name: data[i].facilitiy_name, tier: data[i].tier });
+    for (var i = 1; i < 100; i++) { //i < data.length
+        array.push({ x_coord: data[i].X, y_coord: data[i].Y });
     }
     res.json(array);
-[]
+
 }
 
 

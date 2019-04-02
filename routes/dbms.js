@@ -14,7 +14,7 @@ var mysql = require('mysql'),
 
 
 //var host = "104.198.11.53";  //from GCloud instance (this may change)
-//var database = "tier-one";
+//var database = "TIER_ONE";
 //var user = "root";
 //var password = "alpha";
 var host = "35.236.96.52";  //from GCloud instance (this may change)
