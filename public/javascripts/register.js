@@ -1,7 +1,7 @@
 
 
 function isValidUsername(uname) {
-	var validUsername = /^[a-z]*(.gov)$/;
+	var validUsername = /^[a-z]*@[a-z]*(.gov)$/;
 	if (uname.match(validUsername)) {
 		return true;
 	}
@@ -83,7 +83,7 @@ $(document).ready(function colored() {
   //email
   $('.input-1').keyup(function(){
     let len = this.value.length;
-    var emailAdd = /^[a-z]*(.gov)$/;
+    var emailAdd = /^[a-z]*@[a-z]*(.gov)$/;
     const pbText = $('.form-1 .progress-bar_text');
     if (len === 0) {
       $(this).css('border-color', '#2F96EF');
