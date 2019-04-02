@@ -5,6 +5,11 @@ body {
     padding-bottom: 100px;
 }
 
+.instructions {
+    font-family:"Georgia";
+    font-weight:"Italic";
+
+}
 h1 {
     color: #62B6DB;
     font-weight: bold; 

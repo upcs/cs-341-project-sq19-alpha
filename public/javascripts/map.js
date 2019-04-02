@@ -41,7 +41,8 @@ function initializeAddresses(geocoder, map) {
         //alert( "LatLng: "+myLatLng);
         var marker = new google.maps.Marker({
           position: myLatLng,
-          map: map,
+            map: map,
+	    label:'T',
           title: data[i].address
         });
         var infowindow = new google.maps.InfoWindow();
