@@ -137,6 +137,14 @@ $(document).ready(function colored() {
 }
 
 function newUser(){
+    
+    var username = document.getElementById('userEmail');
+    var password = document.getElementById('userPwd');
+  
+    var myEmail = username.value;
+    var myPassword = password.value;
+   
+    
     $.post("/newLogin",{email: myEmail, password: myPassword},
 	   function(status){ }, "json");
 }

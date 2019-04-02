@@ -12,17 +12,10 @@ var router = express.Router();
 /* Expect a post to the server to send the JSON object*/
 router.post('/',function(req, res, next) {
     
-    //variables to hold values that are to be inserted into the ORDERS database
-    var username = document.getElementById('userEmail');
-    var password = document.getElementById('userPwd');
-  
-    var myEmail = username.value;
-    var myPassword = password.value;
-   
-  
-  
-    
-    dbms.dbquery("INSERT INTO users (email, password) VALUES ("+myEmail+", SHA1("+myPassword+"))",
+    var myEmail = req.body.email;
+    var myPassword = req.body.password;
+     
+    dbms.dbquery("INSERT INTO users (email, password) VALUES ('"+myEmail+"', SHA1('"+myPassword+"'))",
 		 function (err, data){ }
 		);
     
