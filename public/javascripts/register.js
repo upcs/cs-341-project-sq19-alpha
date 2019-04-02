@@ -1,3 +1,5 @@
+
+
 function isValidUsername(uname) {
 	var validUsername = /^[a-z]*(.gov)$/;
 	if (uname.match(validUsername)) {
@@ -66,9 +68,78 @@ function validate() {
 	//alert("Sign up successfully. ");
 	if(isValidUsername(usernameVal) && isValidPassword(passwordVal) && isValidRepPsw(passwordVal, passwordRVal)){
 		alert("Sign up successfully. ");
+		document.location.href = "./login.html";
 	}
 
 }
+function colored(){
+//window.$ = window.jQuery = require('./jquery');
+$(document).ready(function colored() {
+
+  const changeText = function (el, text, color) {
+    el.text(text).css('color', color);
+  };
+
+  //email
+  $('.input-1').keyup(function(){
+    let len = this.value.length;
+    var emailAdd = /^[a-z]*(.gov)$/;
+    const pbText = $('.form-1 .progress-bar_text');
+    if (len === 0) {
+      $(this).css('border-color', '#2F96EF');
+      changeText(pbText, 'Email is blank', '#aaa');
+    } else if (!this.value.match(emailAdd)) {
+      $(this).css('border-color', '#FF4B47');
+      changeText(pbText, 'Email needs to be a gov email', '#FF4B47');
+    } else {
+      $(this).css('border-color', '#2DAF7D');
+      changeText(pbText, '', '#2DAF7D');
+    } 
+  });
+
+  //password
+  $('.input-2').keyup(function(){
+    let len = this.value.length;
+    var passw=  /^[A-Za-z]\w{4,12}$/;
+    const pbText = $('.form-2 .progress-bar_text');
+    if (len === 0) {
+      $(this).css('border-color', '#2F96EF');
+      changeText(pbText, 'Password is blank', '#aaa');
+    } else if (len > 0 && len <= 4) {
+      $(this).css('border-color', '#FF4B47');
+      changeText(pbText, 'Password is too short', '#FF4B47');
+    } else if (!this.value.match(passw)) {
+      $(this).css('border-color', '#FF4B47');
+      changeText(pbText, 'Password needs to be started with a letter', '#FF4B47');
+    } else {
+      $(this).css('border-color', '#2DAF7D');
+      changeText(pbText, '', '#2DAF7D');
+    } 
+  }); 
+   
+  //password repeated
+  $('.input-3').keyup(function(){
+    let len = this.value.length;
+    var o_password = document.getElementById('userPwd');
+    const pbText = $('.form-3 .progress-bar_text');
+    if (len === 0) {
+      $(this).css('border-color', '#2F96EF');
+      changeText(pbText, 'Repeated password is blank', '#aaa');
+    } else if (!(this.value == o_password.value)) {
+      $(this).css('border-color', '#FF4B47');
+      changeText(pbText, 'Repeated password does not match', '#FF4B47');
+    } else {
+      $(this).css('border-color', '#2DAF7D');
+      changeText(pbText, '', '#2DAF7D');
+    } 
+  }); 
+});
+}
+
+function newUser(){
+    $.post("/newLogin",{email: myEmail, password: myPassword},
+	   function(status){ }, "json");
+}
 
 
-module.exports = { isValidPassword: isValidPassword, isValidUsername: isValidUsername, isValidRepPsw:isValidRepPsw };
+module.exports = { isValidPassword: isValidPassword, isValidUsername: isValidUsername, isValidRepPsw:isValidRepPsw, colored:colored};
