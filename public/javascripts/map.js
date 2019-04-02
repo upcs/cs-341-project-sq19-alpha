@@ -10,29 +10,36 @@ const sleep = (milliseconds) => {
 
 //under everything else
 function callingAddress() {
-  geocoder = new google.maps.Geocoder();
-  var map = new google.maps.Map(document.getElementById('map'), {
+    geocoder = new google.maps.Geocoder();
+    
+    var map = new google.maps.Map(document.getElementById('map'),{
+  
+
     center: { lat: 45.5122, lng: -122.6587 },
     zoom: 13,
     mapTypeId: 'roadmap'
   });
     initializeAddresses(geocoder, map);
     initAutocomplete(map);
-  //alert("facility address 1= "+facilityAddrs[0]);
+    //alert("facility address 1= "+facilityAddrs[0]);
+     var directionsService = new google.maps.DirectionsService();
+     var directionsDisplay = new google.maps.DirectionsRenderer();
+     directionsDisplay.setMap(map);
    }
-
+var destination; 
 //var markers = [];
 function initializeAddresses(geocoder, map) {
   $.post("/orders", null,
     function (data, status) {
       for( var i=1; i<data.length; i++){
-        //alert("in maps loop");
-        var myLatLng = new google.maps.LatLng(data[i].y_coord, data[i].x_coord);
+          //alert("in maps loop");
+          var myLatLng = new google.maps.LatLng(data[i].y_coord, data[i].x_coord);
         //alert( "LatLng: "+myLatLng);
           var marker = new google.maps.Marker({
               position: myLatLng,
 	      map: map,
-              title:data[i].address
+	      label: 'T',
+              title: data[i].address
           });
           marker.setMap(map);
 	  
@@ -50,13 +57,35 @@ function initializeAddresses(geocoder, map) {
 }
 
 
+/*// ACTUALLY CALCULATING THE ROUTE
+function calcRoute() {
+  //WE WANT THE START VARIABLE TO BE THE INPUT OF THE USER IN THE SEARCH BAR
+    var start = document.getElementById('start').value;
+  //WE WANT THE END VARIABLE TO BE THE ADDRESS OF THE MARKER CLICKED
+    var end = document.getElementById('end').value;
+  //THIS WILL CHANGE BASED OFF OF THE STUFF ON TOP
+  var request = {
+    origin: input.value,
+    destination: end,
+    travelMode: 'DRIVING'
+  };
+  directionsService.route(request, function(result, status) {
+    if (status == 'OK') {
+      directionsDisplay.setDirections(result);
+    }
+  });
+}*/
+
+var input;
+
 function initAutocomplete(map) {
               var markers;
               //alert("search box stuff");
              
-              // Create the search box and link it to the UI element.
-              var input = document.getElementById('pac-input');
+    // Create the search box and link it to the UI element.
+              input = document.getElementById('pac-input');
               var searchBox = new google.maps.places.SearchBox(input);
+    
               map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
               // Bias the SearchBox results towards current map's viewport.
               map.addListener('bounds_changed', function () {
@@ -90,6 +119,7 @@ function initAutocomplete(map) {
                     anchor: new google.maps.Point(17, 34),
                     scaledSize: new google.maps.Size(25, 25)
                   };
+		    //alert(input.value);
                   //alert(place.geometry.location);
                   // Create a marker for each place.
                   markers.push(new google.maps.Marker({
