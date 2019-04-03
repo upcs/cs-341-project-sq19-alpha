@@ -15,3 +15,6 @@ describe('sum suite', function () {
 		expect(index.sum(38, 62)).toBe(100);
 	});
 });
+
+
+
