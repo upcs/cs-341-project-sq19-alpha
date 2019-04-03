@@ -1,42 +1,32 @@
 //-------------------------------------------------------------------------------------
 
 function isValidUnamePass(uname, pass) {
-	var validUsername = /^[a-z]*(.gov)$/;
-	var validPassword = /^[a-z]*(.gov)$/;
-	if ((uname.match(validUsername)) && (pass.match(validPassword))) {
-		return true;
-	}
-	else { // Otherwise...
-		return false;
-	}
+    var validUsername = /^[a-z]*(.gov)$/;
+    var validPassword = /^[a-z]*(.gov)$/;
+    if ((uname.match(validUsername)) && (pass.match(validPassword))) {
+	return true;
+    }
+    else { // Otherwise...
+	return false;
+    }
 }
 
-function retrieveUser(){
-    
-    var username = document.getElementById('username');
-    var password = document.getElementById('password');
-    var usernameVal = username.value;
-    var passwordVal = password.value;
-    
-    $.post("/retrieveUser",null,
-	   function(data, status){
-	       	       
-	       for (var i = 1; i<data.length; i++)
-	       {
-		   if (usernameVal == data[i].email)
-		   {
-		       if (SHA1(passwordVal) == data[i].password)
-		       {
-			   gotoHome();  
-		       }
-		  
-		   }
-       
-	       }
-	       alert("wrong email or password");
-	    
-	       
-	   }, "json");
+var toReturn = false;
+function retrieveUser(password, email,callback){
+
+    $.post("/retrieveUser", {passwordInput: password, emailInput: email}, function(data, status){
+        alert("The post is happening");          
+        toReturn = data[0].result; //This sets toReturn to be true
+        callback(toReturn); //Callback function so that toReturn is set to true
+	
+    }, "json");
+}
+
+function alertHi(toReturn){
+    if(toReturn){
+	//Route to the logged in html page
+	location.replace("https://35.230.96.224/indexLoggedIn.html");
+    }
 }
 
 function goToHome() {
@@ -44,14 +34,13 @@ function goToHome() {
     var password = document.getElementById('password');
     var usernameVal = username.value;
     var passwordVal = password.value;
-    var loginForm = document.getElementById('loginForm');
-    
-    if (isValidUnamePass(usernameVal, passwordVal)) {
-	loginForm.action = "/indexLoggedIn.html";
 
+    if (isValidUnamePass(usernameVal, passwordVal)){
+	
+        retrieveUser(passwordVal, usernameVal, alertHi);
     }
     else { // Otherwise...
-	alert('WARNING: Must enter a valid username AND password.');
+        alert('WARNING: Wrong username or password.');
     }
 }
 
