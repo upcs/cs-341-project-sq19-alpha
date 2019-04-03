@@ -16,7 +16,7 @@ function queryData(data, res) {
 
     for (var i = 1; i < data.length; i++) {
 
-        array.push({ x_coord: data[i].X, y_coord: data[i].Y, address: data[i].address, name: data[i].facilitiy_name, tier: data[i].tier });
+        array.push({ x_coord: data[i].X, y_coord: data[i].Y, address: data[i].address, name: data[i].facility_name, tier: data[i].tier });
     }
     res.json(array);
 
