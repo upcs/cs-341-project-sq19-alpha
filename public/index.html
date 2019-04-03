@@ -49,8 +49,8 @@
       <br></br>
 
 
-    <!--The following was based off of code in the google maps source followed by the link below
-	Source:https://developers.google.com/maps/documentation/javascript/examples/places-searchbox --> 
+      <!--The following was based off of code in the google maps source followed by the link below
+	Source:https://developers.google.com/maps/documentation/javascript/examples/places-searchbox -->
 
       <center>
 
@@ -69,6 +69,10 @@
           <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAHAVcAEo6JCug4Fm2Bzw156mvETaQgD8&libraries=places&callback=initAutocomplete"></script>
 
+          <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAHAVcAEo6JCug4Fm2Bzw156mvETaQgD8&libraries=visualization">
+            </script>
+
 
 
 
@@ -78,6 +82,7 @@
 
 
         <br><button type="button" id="findMyRoute" onclick="modalPop()">Print PDF Version</button><br>
+        <br><button type="button" id="heatMap" onclick="heatAddresses()">Heat Map</button><br>
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
