@@ -8,11 +8,11 @@ const register = require('./register');
 
 describe('isValidUsername suite', function () {
 	test('test valid uname', () => {
-		expect(register.isValidUsername('g.gov')).toBe(true);
+		expect(register.isValidUsername('g@ah.gov')).toBe(true);
 	});
 
 	test('test valid uname', () => {
-		expect(register.isValidUsername('asdf.gov')).toBe(true);
+		expect(register.isValidUsername('asdf@up.gov')).toBe(true);
 	});
 
 	test('test valid uname', () => {
