@@ -21,6 +21,21 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+
+
+     .mapouter {
+              text-align: right;
+              height: 500px;
+              width: 600px;
+            }
+
+            .gmap_canvas {
+              overflow: hidden;
+              background: none;
+              height: 500px;
+              width: 600px;
+            }
+	    
   </style>
 </head>
 
@@ -79,14 +94,19 @@
           <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAHAVcAEo6JCug4Fm2Bzw156mvETaQgD8&libraries=places&callback=initAutocomplete"></script>
 
+<script
+type="text/javascript"
 
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAHAVcAEo6JCug4Fm2Bzw156mvETaQgD8&libraries=visualization">
+
+</script>
 
 
         </div></br>
 
 
 
-
+	<br><button type="button"id="heatMap"onclick="heatAddresses()">Heat Map</button><br>
         <br><button type="button" id="findMyRoute" onclick="modalPop()">Print PDF Version</button><br>
 
         <!-- The Modal -->
@@ -105,6 +125,7 @@
 
       </center>
       </div>
+
 
 
 
