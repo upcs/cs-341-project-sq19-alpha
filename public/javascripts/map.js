@@ -201,4 +201,4 @@ function main() {
   callingAddress();
 }
 
-module.exports = { addMarkers: addMarkers };
+module.exports = { heatAddresses: heatAddresses };
