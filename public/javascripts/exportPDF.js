@@ -24,11 +24,11 @@ $(function() {
             optimized: false,
             allowTaint: false,
             onrendered: function(canvas) {
-                alert("hi!");
+               // alert("hi!");
                 document.body.appendChild(canvas);
-                alert("hi1");
+               // alert("hi1");
                 $("#img-out").append(canvas);
-                alert("hi2");
+               // alert("hi2");
             }
         });
         
