@@ -24,6 +24,7 @@ function dataFunction(){
 	   }, "json");
     
 }
+var buffer;
 function filterFunction(){
    
     // Declare variables 
@@ -33,6 +34,20 @@ function filterFunction(){
     table = document.getElementById("myData");
     tr = table.getElementsByTagName("tr");
     var myName;
+    var counter = 0;
+
+    var toCheck = (tr.length-1);
+    if(toCheck != 0){
+	if(counter == toCheck){
+	    
+	    tr[0].style.display = "none";
+	    
+	}
+	else{
+	    tr[0].style.display = "";
+	    document.getElementById("nothingLeft").style.display = "block";
+	}
+    }
     // Loop through all table rows, and hide those who don't match the search query
     for (i = 0; i < tr.length; i++) {
 	td = tr[i].getElementsByTagName("td")[0];
@@ -47,11 +62,27 @@ function filterFunction(){
 		tr[i].style.display = "";
 	    } else {
 		tr[i].style.display = "none";
+		 counter = counter+1;
 	    }
 	}
 
 
     }
+  
+    if(toCheck != 0){
+	if(counter == toCheck){
+	    
+	    tr[0].style.display = "none";
+	    document.getElementById("nothingLeft").style.display = "block";
+	    
+	}
+	else{
+	    tr[0].style.display = "";
+	     document.getElementById("nothingLeft").style.display = "none";
+	}
+    }
+  
+    
 }
 
 function moreInformation(index){
