@@ -14,5 +14,24 @@ function savePDF() {
                 //setTimeout(function () { window.open(imgData) }, 1000);
             }
         });
-    }
+}
+
+$(function() { 
+    $("#findMyRoute").click(function() { 
+        $("#img-out").children().remove();
+        html2canvas($("#map"), {
+            useCORS: true,
+            optimized: false,
+            allowTaint: false,
+            onrendered: function(canvas) {
+                alert("hi!");
+                document.body.appendChild(canvas);
+                alert("hi1");
+                $("#img-out").append(canvas);
+                alert("hi2");
+            }
+        });
+        
+    });
+}); 
 
