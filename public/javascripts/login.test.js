@@ -16,27 +16,15 @@ describe('isValidUnamePass suite', function () {
 	test('test empty strings', () => {
 		expect(login.isValidUnamePass('', '')).toBe(false);
 	});
+
+	// test("returns undefined by default", () => {
+
+ // 		const mock = jest.fn();
+
+	// 	expect(mock.isValidUnamePass).toHaveBeenCalled();
+	// 	//expect(login.isValidUnamePass).toHaveBeenCalledTimes(1);
+	// 	//expect(login.isValidUnamePass).toHaveBeenCalledWith(login.goToHome);
+	// });
+
 });
 
-/*
-
-const $ = require('jquery');
-jest.mock('./login');
-test('check button click', () => {
-
-	const goToHome = login.goToHome;
-
-	// Tell the fetchCurrentUser mock function to automatically invoke
-	// its callback with some data
-	goToHome.mockImplementation(cb => {
-		cb({
-			usernameVal: 'g.gov',
-			passwordVal: 'g.gov',
-			testBool: true
-		});
-	});
-
-	$("#loginButton").click();
-	expect(goToHome).toBeCalled();
-
-});*/
