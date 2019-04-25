@@ -110,7 +110,7 @@ $(document).ready(function colored() {
       changeText(pbText, 'Password is too short', '#FF4B47');
     } else if (!this.value.match(passw)) {
       $(this).css('border-color', '#FF4B47');
-      changeText(pbText, 'Password needs to be started with a letter', '#FF4B47');
+      changeText(pbText, 'Password needs to be started with a letter and no symbols are allowed', '#FF4B47');
     } else {
       $(this).css('border-color', '#2DAF7D');
       changeText(pbText, '', '#2DAF7D');
