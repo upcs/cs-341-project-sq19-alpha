@@ -5,7 +5,7 @@ function dataFunction(){
 	   function(data, status){
 	       
 	       //Here we make a variable called tr that we will append into the
-	       //html file. Basically we are writing html code here and looping through
+   	       //html file. Basically we are writing html code here and looping through
 	       //the content of the database.
 	       
 	       var tr = " ";
