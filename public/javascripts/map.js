@@ -254,6 +254,7 @@ function resetMap(){
     mapTypeId: 'roadmap'
   });
 
+  //trigger main features
   callingAddress();
 }
 
