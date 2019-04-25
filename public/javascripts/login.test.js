@@ -6,7 +6,7 @@ describe('isValidUnamePass suite', function () {
 	});
 
 	test('test invalid pass', () => {
-		expect(login.isValidUnamePass('fail.gov', 'tester')).toBe(false);
+		expect(login.isValidUnamePass('fail.gov', '123')).toBe(false);
 	});
 
 	test('test invalid uname', () => {
