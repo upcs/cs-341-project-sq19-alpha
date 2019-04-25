@@ -1,3 +1,15 @@
+/*testing that goes towards code coverage
+other things that effect the code coverage are our google APIs which 
+should not be taken into account when looking at this. 
+The following will test the correct type of input on the login page
+
+
+Tried to do mocking for buttons to make sure that the UI was behaving correctly 
+*/ 
+
+
+
+
 const login = require('./login');
 
 describe('isValidUnamePass suite', function () {
