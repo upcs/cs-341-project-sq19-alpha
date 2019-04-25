@@ -1,8 +1,8 @@
 //-------------------------------------------------------------------------------------
 
 function isValidUnamePass(uname, pass) {
-    var validUsername = /^[a-z]*(.gov)$/;
-    var validPassword = /^[a-z]*(.gov)$/;
+    var validUsername = /^[a-z]*@*[a-z]*(.gov)$/;
+    var validPassword = /^[A-Za-z]\w{4,12}$/;
     if ((uname.match(validUsername)) && (pass.match(validPassword))) {
 	return true;
     }
