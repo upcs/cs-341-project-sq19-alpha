@@ -35,7 +35,7 @@ in the future we would have implemented our code in a manner using these so we w
 
 
 
-
+/*
 const map = require('./map');
 
 describe('sum suite', function () {
@@ -52,3 +52,4 @@ describe('sum suite', function () {
 	});
 });
 
+*/
