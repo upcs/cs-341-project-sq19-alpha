@@ -11,20 +11,22 @@ var destination;
 var start;
 var directionsService;
 var directionsDisplay;
-var heatmapData=[];
+
+var heatmapData = [];
 var map, heatmap;
+
 
 //under everything else
 
 function callingAddress() {
-  
-    input = document.getElementById('pac-input');
-    directionsService = new google.maps.DirectionsService();
-     directionsDisplay = new google.maps.DirectionsRenderer();
-    directionsDisplay.setMap(map);
-     initializeAddresses(map);
-    initAutocomplete(map);
- 
+
+  input = document.getElementById('pac-input');
+  directionsService = new google.maps.DirectionsService();
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  directionsDisplay.setMap(map);
+  initializeAddresses(map);
+  initAutocomplete(map);
+
 }
 
 
@@ -38,18 +40,18 @@ function initializeAddresses(map) {
         //alert( "LatLng: "+myLatLng);
         var marker = new google.maps.Marker({
           position: myLatLng,
-            map: map,
-	    label:'T',
+          map: map,
+          label: 'T',
           title: data[i].address
         });
         var infowindow = new google.maps.InfoWindow();
         google.maps.event.addListener(marker, 'click', function () {
           infowindow.setContent('<p>Location:' + this.title + '</p>');
-            infowindow.open(map, this);
-	    destination = this.title;
-	    //alert(destination);
-	    calcRoute();
-      });
+          infowindow.open(map, this);
+          destination = this.title;
+          //alert(destination);
+          calcRoute();
+        });
         marker.setMap(map);
       }
     }, "json");
@@ -104,8 +106,8 @@ function initAutocomplete(map) {
         anchor: new google.maps.Point(17, 34),
         scaledSize: new google.maps.Size(25, 25)
       };
-	//alert(place.geometry.location);
-	//alert(input.value);
+      //alert(place.geometry.location);
+      //alert(input.value);
       // Create a marker for each place.
       markers.push(new google.maps.Marker({
         map: map,
@@ -113,7 +115,7 @@ function initAutocomplete(map) {
         title: place.name,
         position: place.geometry.location
       }));
-	
+
       if (place.geometry.viewport) {
         // Only geocodes have viewport.
         bounds.union(place.geometry.viewport);
@@ -178,17 +180,17 @@ function initAutocomplete(map) {
 // ACTUALLY CALCULATING THE ROUTE
 function calcRoute() {
   //WE WANT THE START VARIABLE TO BE THE INPUT OF THE USER IN THE SEARCH BAR
-    start = input.value;
+  start = input.value;
   //WE WANT THE END VARIABLE TO BE THE ADDRESS OF THE MARKER CLICKED
-    var end = destination;
-    //alert(end);
+  var end = destination;
+  //alert(end);
   //THIS WILL CHANGE BASED OFF OF THE STUFF ON TOP
   var request = {
     origin: start,
     destination: end,
     travelMode: 'WALKING'
   };
-  directionsService.route(request, function(result, status) {
+  directionsService.route(request, function (result, status) {
     if (status == 'OK') {
       directionsDisplay.setDirections(result);
     }
@@ -204,8 +206,46 @@ function main() {
     mapTypeId: 'roadmap'
   });
 
+  var flightPlanCoordinates = [
+    { lat: 45.605571, lng: -122.683103 },
+    { lat: 45.598737, lng: -122.603366 },
+    { lat: 45.571205, lng: -122.542291 },
+    { lat: 45.558047, lng: -122.473612 },
+    { lat: 45.548422, lng: -122.472293 },
+    { lat: 45.548956, lng: -122.491536 },
+    { lat: 45.518183, lng: -122.497197 },
+    { lat: 45.517663, lng: -122.482773 },
+    { lat: 45.459490, lng: -122.496808 },
+    { lat: 45.457414, lng: -122.661450 },
+    { lat: 45.432369, lng: -122.667632 },
+    { lat: 45.433396, lng: -122.742370 },
+    { lat: 45.494021, lng: -122.742312 },
+    { lat: 45.526743, lng: -122.759448 },
+    { lat: 45.533966, lng: -122.784168 },
+    { lat: 45.567645, lng: -122.791032 },
+    { lat: 45.585447, lng: -122.804091 },
+    { lat: 45.591697, lng: -122.835719 },
+    { lat: 45.608538, lng: -122.835731 },
+    { lat: 45.602768, lng: -122.815096 },
+    { lat: 45.619129, lng: -122.791024 },
+    { lat: 45.651794, lng: -122.763509 },
+    { lat: 45.605571, lng: -122.683103 }
+  ];
+  var flightPath = new google.maps.Polyline({
+    path: flightPlanCoordinates,
+    geodesic: true,
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+  flightPath.setMap(map);
+
   callingAddress();
 }
+
+
+
+module.exports = { heatAddresses: heatAddresses };
 
 function resetMap(){
   map = new google.maps.Map(document.getElementById('map'), {
@@ -214,8 +254,10 @@ function resetMap(){
     mapTypeId: 'roadmap'
   });
 
+  //trigger main features
   callingAddress();
 }
 
 
 module.exports = { addMarkers: addMarkers, sum: sum };
+

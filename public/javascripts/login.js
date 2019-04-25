@@ -48,4 +48,4 @@ function goToHome() {
 
 
 
-module.exports = {isValidUnamePass:isValidUnamePass};
+module.exports = {isValidUnamePass:isValidUnamePass, alertHi:alertHi};

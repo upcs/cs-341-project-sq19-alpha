@@ -96,6 +96,19 @@ describe('isValidUnamePass suite', function () {
 
   
 
+});
+
+describe('alertHi (callback function) suite', function () {
+	test('test for return', () => {
+		//const alertHi = jest.fn();
+		//drinkAll(drink, 'lemon');
+		//expect(drink).toHaveBeenCalled();
+		expect(login.alertHi(true)).toBeDefined();
+	});
+});
+
+/*
+
 	// test("returns undefined by default", () => {
 
  // 		const mock = jest.fn();

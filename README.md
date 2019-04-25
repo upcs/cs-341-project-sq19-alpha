@@ -11,6 +11,35 @@ Sprint1:
   - login page + username/passward primilinary checks
   - "government official" stats page initial set up (not secure yet)
 
+Sprint2:
+	- Data from Tier One Database displayed in table
+	- Enhanced About page and Extra Info page
+	- Revamped website aesthetic (major CSs improvements)
+	- Organization of files
+	- Fix ignore git
+	- Passing tests for login username and password (check against regex)
+
+Sprint3:
+Major Accomplishments/Improvements:
+	- Solidifying the VISION
+	- Data base table querying (search and filter)
+	- Export and print funciontality
+	- Google Maps API familiarity and Markers
+	- Markers on map
+	- UI improvements: consistency, intiutive, all major elements present
+	
+*The following were completed for Sprint 4 with the additional feature of a heatmap
+Sprint 4 Deliverables:
+Team Alpha plans to finalize our project, the Portland Post-Disaster Prep, by completing the following:
+1)	Solve firewall rule/port issues and get GCP running
+2)	Solve “limit on markers” issue and figure out how to display all facilities as markers
+3)	Make markers clickable (to display basic info including facility name and address)
+4)	Routing: MAIN FEATURE
+5)	Create all needed databases (for markers, login, and facility info)
+6)	Login feature
+7)	TESTING
+
+
 
 21 FEB 2019- Story Acceptance Test:
 As a consumer, after entering my address, I want to know my route is accurate from my Portland address to my nearest facility.
@@ -29,25 +58,3 @@ What can we automate?
 - Give real "testing" data (give hardcoded valid/invalid addresses to test)
 - Distance/boundary calculations
 - Error messages
-
-Sprint2:
-
-Sprint3:
-Major Accomplishments/Improvements:
-	- Solidifying the VISION
-	- Data base table querying (search and filter)
-	- Export and print funciontality
-	- Google Maps API familiarity and Markers
-	- Markers on map
-	- UI improvements: consistency, intiutive, all major elements present
-	
-	
-Sprint 4 Deliverables:
-Team Alpha plans to finalize our project, the Portland Post-Disaster Prep, by completing the following:
-1)	Solve firewall rule/port issues and get GCP running
-2)	Solve “limit on markers” issue and figure out how to display all facilities as markers
-3)	Make markers clickable (to display basic info including facility name and address)
-4)	Routing: MAIN FEATURE
-5)	Create all needed databases (for markers, login, and facility info)
-6)	Login feature
-7)	TESTING
