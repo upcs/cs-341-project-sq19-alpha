@@ -1,5 +1,10 @@
 //TESTING FUNCTION FOR MAP.JS 
 
+
+// We did not complete this test file. We wanted to test to make sure the
+// addresses were working properly, the heat map was working properly, and
+// that the data (Tier ones) load up completely.
+
 const setupGoogleMock = () => {
     /*** Mock Google Maps JavaScript API ***/
   const google = {
