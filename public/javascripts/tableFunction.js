@@ -110,6 +110,8 @@ function main(){
     filterFunction();
 }
 
+module.exports = { dataFunction:dataFunction, filterFunction:filterFunction };
+
 
 /* End of file */
 

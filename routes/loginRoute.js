@@ -16,7 +16,7 @@ function queryData(data, res){
     
     for(var i = 0; i<data.length; i++)
     {
-	array.push({email: data[i].email, password: data[i].password);
+	array.push({email: data[i].email, password: data[i].password});
     }
     res.json(array);
   
