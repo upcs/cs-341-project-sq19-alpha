@@ -97,7 +97,7 @@ describe('isValidUnamePass suite', function () {
   
 
 });
-
+/*
 describe('alertHi (callback function) suite', function () {
 	test('test for return', () => {
 		//const alertHi = jest.fn();
@@ -106,8 +106,8 @@ describe('alertHi (callback function) suite', function () {
 		expect(login.alertHi(true)).toBeDefined();
 	});
 });
+*/
 
-/*
 
 	// test("returns undefined by default", () => {
 
@@ -118,6 +118,5 @@ describe('alertHi (callback function) suite', function () {
 	// 	//expect(login.isValidUnamePass).toHaveBeenCalledWith(login.goToHome);
 	// });
 
-});
 
 
