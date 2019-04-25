@@ -2,11 +2,11 @@ const login = require('./login');
 
 describe('isValidUnamePass suite', function () {
 	test('test valid uname & pass', () => {
-		expect(login.isValidUnamePass('g.gov', 'g.gov')).toBe(true);
+		expect(login.isValidUnamePass('test@test.gov', 'tester')).toBe(true);
 	});
 
 	test('test invalid pass', () => {
-		expect(login.isValidUnamePass('g.gov', 'abc')).toBe(false);
+		expect(login.isValidUnamePass('fail.gov', 'tester')).toBe(false);
 	});
 
 	test('test invalid uname', () => {
