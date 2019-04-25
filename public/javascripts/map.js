@@ -173,7 +173,7 @@ function initAutocomplete(map) {
 
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+//google.maps.event.addDomListener(window, 'load', initialize);
 
 
 // ACTUALLY CALCULATING THE ROUTE
@@ -208,4 +208,8 @@ function main() {
   callingAddress();
 }
 
-module.exports = { addMarkers: addMarkers };
+function sum(x,y){
+  return x+y;
+}
+
+module.exports = { addMarkers: addMarkers, sum: sum };
